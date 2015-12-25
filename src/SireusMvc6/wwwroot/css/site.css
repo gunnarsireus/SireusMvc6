@@ -1,0 +1,177 @@
+﻿/* LTB TAGS */
+        .black40 {
+            color: Black;
+        }
+
+        .red40 {
+            color: Red;
+        }
+
+        .BorderInset {
+            border-style: inset;
+            font-size:smaller;
+            text-align:center;
+            min-height:30px;
+            min-width:50px;
+            padding-top:4px;
+            padding-left:0px;
+            padding-right:0px;
+            /*outline: 1px solid yellow;*/
+            font-weight:700;
+        }
+
+        .BorderOutset {
+            border-style: outset;
+            font-size:smaller;
+            text-align:right;
+            min-height:30px;
+            padding-top:4px;
+            padding-left:8px;
+            padding-right:8px;
+            /*outline: 1px solid;*/
+            font-weight:700;
+        }
+
+        .AlignRight {
+            font-size: small;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .XLargeCenterUnderline {
+            font-size: x-large;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+
+        body {
+            padding-bottom: 20px;
+            padding-top: 81px;
+        }
+
+        .grey-background { background-color: rgb(250, 250, 250); }
+
+        /* Wrapping element */
+
+        /* Set some basic padding to keep content from hitting the edges */
+
+        .body-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* Set widths on the form inputs since otherwise they're 100% wide */
+
+        input,
+        select,
+        textarea { max-width: 280px; }
+
+        /* Carousel */
+
+        .carousel-caption { z-index: 10 !important; }
+
+        .carousel-caption p {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-caption { z-index: 10 !important; }
+        }
+
+        /* =========================================================================
+For any free or commercial usage please keep this credits text intact.
+Author : Femi Hasani www.vision.to ,intital idea and CSS code.
+Credits: Jasson M.Knight cutcodedown.com, rewritten CSS and bug fixes.
+The original version of this stylesheet and the associated (x)html
+is available at http://www.vision.to/single-image-sliding-doors-and-rollover.php
+A link to www.vision.to would be apperciated but not mandatory. 
+=============================================================================== */
+
+        #spriteTabs2,
+        #spriteTabs {
+            background: url('Images/Menu.png') 0 0 repeat-x;
+            font: bold 16px/45px sans-serif;
+            height: 45px; /* trips haslayout, wrap floats IE */
+            list-style: none;
+            margin: 0px;
+            overflow: hidden; /* wrap floats */
+            padding: 0px;
+        }
+
+        #spriteTabs2 li,
+        #spriteTabs li { display: inline; }
+
+        #spriteTabs2 a,
+        #spriteTabs a {
+            background: transparent url('Images/Menu.png') 0 -45px no-repeat;
+            color: #EEE;
+            float: left;
+            margin-right: 10px;
+            padding-left: 10px;
+            position: relative;
+            text-decoration: none;
+        }
+
+        #spriteTabs2 a span,
+        #spriteTabs a span {
+            background: url('Images/Menu.png') -502px -45px no-repeat;
+            height: 45px;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            width: 10px;
+        }
+
+
+        .black /*1*/ { color: yellow; }
+
+        .blue /*2*/ { color: orangered; }
+
+        .bluegreen /*3*/ { color: greenyellow; }
+
+        .bronze  /*4*/ { color: brown; }
+
+        .gold  /*5*/ { color: goldenrod; }
+
+        .green  /*6*/ { color: green; }
+
+        .red  /*7*/ { color: red; }
+
+        .redgreen  /*8*/ { color: green; }
+
+        .redblue  /*9*/ { color: blue; }
+
+        .silver  /*10*/ { color: silver; }
+
+        .violet  /*11*/ { color: violet; }
+
+        .white /*12*/ { color: white; }
+
+
+
+        #spriteTabs2 .current a,
+        #spriteTabs .current a {
+            background-color: transparent;
+            background-position: 0 -135px;
+            color: #000;
+        }
+
+        .current .current a span,
+        #spriteTabs .current a span { background-position: -502px -135px; }
+
+        #spriteTabs2 a:active,
+        #spriteTabs a:active,
+        #spriteTabs a:focus,
+        #spriteTabs a:hover {
+            background-color: transparent;
+            background-position: 0 -90px;
+            color: #800;
+        }
+
+
+        #spriteTabs2 a:active span,
+        #spriteTabs a:active span,
+        #spriteTabs a:focus span,
+        #spriteTabs a:hover span { background-position: -502px -90px; }

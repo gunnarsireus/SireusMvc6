@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../lib/dnx451/LTBCore.dll"
+      },
+      "dependencies": {
+        "System.Web.DataVisualization": "1.0.0-*",
+        "System.Web": "1.0.0-*",
+        "NMath": "1.0.0-*",
+        "NMathStats": "1.0.0-*"
+      }
+    }
+  }
+}

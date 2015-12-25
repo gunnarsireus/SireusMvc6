@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "F:\\Documents\\Visual Studio 2015\\Projects\\SireusMvc6\\src\\SireusMvc6\\Libs\\System.Web.WebPages.dll"
+      },
+      "dependencies": {
+        "System.Web": "1.0.0-*",
+        "System.Web.WebPages.Deployment": "1.0.0-*"
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+﻿
+@section SideBar{
+    <div class="col-md-12">
+        <h4>Arbete med konvertering till Bootstrap pågår</h4>
+    </div>
+}
+
+
+<table border="0" class="album-frame">
+
+    <tr>
+
+        <td class="item"></td>
+
+        <td class="item"></td>
+
+        @{
+            var AlbumList = new List<Album>();
+            AlbumList = PhotoManager.GetAlbums();
+            ViewBag.Counter = 0;
+            foreach (var album in AlbumList)
+            {
+                ViewData["AlbumID"] = album.AlbumID;
+                ViewData["Caption"] = album.Caption;
+                ViewData["Count"] = album.Count;
+
+                <td class="item">
+                    <table border="0" cellpadding="0" cellspacing="0" class="album-frame">
+                        <tr>
+                           <td class="topx----">
+                                <img alt="" src="/Css/Images/album-l1.gif" />
+                            </td>
+                            <td class="top-x---">
+                                <img alt="" src="/Css/Images/album-mtl.gif" />
+                            </td>
+                            <td class="top--x--"></td>
+                            <td class="top---x-">
+                                <img alt="" src="/Css/Images/album-mtr.gif" />
+                            </td>
+                            <td class="top----x">
+                                <img alt="" src="/Css/Images/album-r1.gif" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mtpx----">
+                                <img alt="" src="/Css/Images/album-l2.gif" />
+                            </td>
+                            <td colspan="3" rowspan="3">
+                                <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">
+                                    <img src="/Handler/Index/AlbumID=@ViewData["AlbumID"]/Size=M" class="photo_198"
+                                         style="border: 4px solid white" alt="Sample Photo from Album Number @ViewData["AlbumID"]" />
+                                </a>
+                            </td>
+                            <td class="mtp----x">
+                                <img alt="" src="/Css/Images/album-r2.gif" />
+                            </td>
+                        </tr>
+                        <tr>
+                           <td class="midx----"></td>
+                            <td class="mid----x"></td>
+                        </tr>
+                        <tr>
+                            <td class="mbtx----">
+                                <img alt="" src="/Css/Images/album-l3.gif" />
+                            </td>
+                            <td class="mbt----x">
+                                <img alt="" src="/Css/Images/album-r3.gif" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="botx----">
+                                <img alt="" src="/Css/Images/album-l4.gif" />
+                            </td>
+                            <td class="bot-x---">
+                                <img alt="" src="/Css/Images/album-mbl.gif" />
+                            </td>
+                            <td class="bot--x--"></td>
+                            <td class="bot---x-">
+                                <img alt="" src="/Css/Images/album-mbr.gif" />
+                            </td>
+                            <td class="bot----x">
+                                <img alt="" src="/Css/Images/album-r4.gif" />
+                            </td>
+                        </tr>
+                    </table>
+                    <h4>
+                        <a href="/Photos/Index/@ViewData["AlbumID"]/@ViewData["Caption"]">@ViewData["Caption"]</a>
+                    </h4>
+                    @ViewData["Count"] bilder
+                </td>
+                ViewBag.Counter++;
+                if (((ViewBag.Counter % 2) == 0) && (ViewBag.Counter < AlbumList.Count))
+                {
+                    <text> @Html.Raw("</tr><tr><td class='item'></td><td class='item'></td>") </text>
+                }
+            }
+        }
+    </tr>
+</table>
+<script src="/js/site.js"></script>
+<script type="text/javascript">SetCurrentPageOnHeader("Home");</script>

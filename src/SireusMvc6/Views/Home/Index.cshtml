@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section SideBar{
+<div class="col-md-12">
+    <div class="panel panel-primary  center-block" id="divSwirl">
+        <div class="panel-heading text-center">
+            <h3 class="panel-title">Dagens bild</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row text-center">
+                <div class="span4"></div>
+                <div class="span4">
+                    <a href="/Details/Index/0/0"><img src="/Handler/Index/PhotoID=0/Size=M" alt="" /></a>
+                </div>
+                <div class="span4"></div>
+            </div>
+        </div>
+    </div>
+    <div id="divText" style="visibility: hidden">
+        Bilder tagna av medarbetare p&#229; Sir&#233;us Consulting AB.
+    </div>
+    <div id="divDownload" style="visibility: hidden;">
+        <p>
+            <a href="/Handler/Download/0/M">
+                <img src="~/Css/Images/button-download.gif" alt="download photo" />
+            </a>
+        </p>
+        <p>
+            Se <a href="/Albums/Index/">fler bilder</a>
+        </p>
+    </div>
+
+    <hr />
+    <div id="divContact" style="visibility: hidden">
+        <h4>
+            Kontaktinformation
+        </h4>
+        <p>
+            <span class="glyphicon glyphicon-phone-alt" style="color: gray"></span>&nbsp;0708-940 567
+        </p>
+        <p>
+            <span class="glyphicon glyphicon-envelope" style="color: gray"></span>&nbsp;<a href="mailto:gunnarsireus@telia.com">gunnarsireus@telia.com</a>
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class=" panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Dagens väder</h3>
+                </div>
+                <div class="panel-body panel-height_small">
+                    <div id="divWeather" style="visibility: hidden;">
+                        <div class="row">
+                            <div id="c_420cee0ee12535cd2a922993c70ebd2e" class="center-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://www.klart.se/widget/widget_loader/420cee0ee12535cd2a922993c70ebd2e"></script>
+</div>
+}
+
+<div class="col-md-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Välkommen till Gunnar Siréus hemsida</h3>
+        </div>
+        <div class="panel-body">
+            Jag arbetar numera på <a href="http://www.itancan.com/">Itancan Consulting AB</a> i Upplands Väsby och tar gärna konsultuppdrag inom ASP.NET och SQL Server-utveckling, backend-programmering i C#, PHP, Visual Basic och traditionell frontendutveckling.
+            <br />
+            <br />
+            <img src="/Css/Images/MCTS.jpg" alt="Logo" class="center-block" />
+            <br />
+            Tveka inte att kontakta mig på <a href="mailto:gunnarsireus@telia.com">gunnarsireus@telia.com</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Dimensionering av Life Time Buy lagernivå.</h3>
+        </div>
+        <div class="panel-body">
+            En sökning i internet visar att det finns många papper publicerade som beskriver LTB-problemet. Som referens,
+            och som exempel bland många andra hänvisas till följande papper:
+            <ul>
+                <li>
+                    <a href="http://www.enme.umd.edu/ESCML/Papers/AgingAircraft07-LTB.pdf">
+                        Lifetime
+                        Buy Optimization to Minimize Lifecycle Cost
+                    </a>
+                </li>
+                <li>
+                    <a href="http://cms.ieis.tue.nl/Beta/Files/WorkingPapers/Beta_wp214.pdf">
+                        The Final
+                        Order Problem for Repairable Spare Parts under condemnation
+                    </a>
+                </li>
+            </ul>
+            I korthet är problemet att beräkna hur många reservdelar som behöver lagras för att kunna fullgöra garantiåtaganden. Detta problem
+            uppstår för t.ex. flygplanstillverkare och leverantörer av telekomutrustning.
+            Tänk er en flygplanstillverkare som har sålt tiotusentals flygplan av en viss
+            modell med låt oss säga 30 års garanti. Så länge som de utbytbara komponenter
+            som används i flygplanen fortfarande tillverkas kan reservdelar beställas direkt från fabrik.
+            Men vid någon tidpunkt kommer produktionen av en viss komponent att upphöra. På grund av
+            den stora mängd flygplan i drift kommer det att finnas ett behov av komponenten under hela
+            garantiperioden. I många fall är det möjligt att reparera trasiga delar och de reparerade delarna kan återanvändas som reservdelar. Men inte alla delar är möjliga
+            att reparera, man talar då om reparationsförluster på exempelvis 30%. Det innebär att endast 70% av
+            de delar som skickas för reparation kan återanvändas som reservdel efter reparation. Så länge som
+            reparationsverkstäderna har den kunskap och utrustning som krävs för reparation är behovet
+            av att lagra delen som reservdel mindre. Vid någon tidpunkt är det inte längre lönsamt hålla
+            reparationsverksamheten igång och då måste återstående behov av komponenten täckas genom lagring i ett reservdelslager.
+            På sidan <a href="http://www.sireus.se/LTB/Index">LTB</a> har ni möjligheten att själva prova dimensionering av ett LTB-lager.
+
+        </div>
+    </div>
+</div>
+<script src="/js/site.js"></script>
+<script type="text/javascript">SetCurrentPageOnHeader("Home");</script>

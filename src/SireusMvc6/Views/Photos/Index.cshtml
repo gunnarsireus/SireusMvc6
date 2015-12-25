@@ -1,0 +1,108 @@
+﻿
+@section SideBar{
+    <div class="col-md-12">
+        <h4>Arbete med konvertering till Bootstrap pågår</h4>
+    </div>
+}
+
+<div class="col-md-12">
+    <div class="buttonbar buttonbar-top">
+
+        <a href="/Albums/Index/">
+
+            <img alt="" src="/Css/Images/button-gallery.gif" />
+        </a>
+
+    </div>
+
+    <table id="DataList1" class="view" cellspacing="0" border="0" style="border-collapse: collapse;">
+
+        <tr>
+
+            <td class="item"></td>
+
+            @{
+                var PhotoList = new List<Photo>();
+                PhotoList = PhotoManager.GetPhotos(ViewBag.AlbumID);
+                ViewBag.Counter = 0;
+                foreach (var photo in PhotoList)
+                {
+                    ViewBag.PhotoID = photo.PhotoID;
+                    ViewData["Caption"] = photo.Caption;
+
+                    <td>
+
+                        <table border="0" cellpadding="0" cellspacing="0" class="photo-frame">
+
+                            <tr>
+
+                                <td class="topx--"></td>
+
+                                <td class="top-x-"></td>
+
+                                <td class="top--x"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="midx--"></td>
+
+                                <td>
+
+                                    <a href='/Details/Index/@ViewBag.PhotoID.ToString()/@ViewBag.AlbumID.ToString()'>
+
+                                        <img src="/Handler/Index/PhotoID=@ViewBag.PhotoID.ToString()/Size=S" class="photo_198"
+                                             style="border: 4px solid white" alt='Thumbnail of Photo Number @ViewBag.PhotoID.ToString()' />
+                                    </a>
+
+                                </td>
+
+                                <td class="mid--x"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="botx--"></td>
+
+                                <td class="bot-x-"></td>
+
+                                <td class="bot--x"></td>
+
+                            </tr>
+
+                        </table>
+
+                        <p>
+
+                            @ViewData["Caption"]
+                        </p>
+
+                    </td>
+                    ViewBag.Counter++;
+                    if (((ViewBag.Counter % 4) == 0) && (ViewBag.Counter < PhotoList.Count))
+                    {
+                        <text> @Html.Raw("</tr><tr><td class='item'></td>") </text>
+                    }
+                }
+            }
+        </tr>
+
+    </table>
+
+    @if (PhotoList.Count == 0)
+    {
+        <text>There are currently no pictures in this album.</text>
+    }
+    <div class="buttonbar">
+
+        <a href="/Albums/Index/">
+
+            <img alt="" src="/Css/Images/button-gallery.gif" id="gallery" />
+        </a>
+
+    </div>
+</div>
+<script src="/js/site.js"></script>
+<script type="text/javascript">SetCurrentPageOnHeader("Home");</script>

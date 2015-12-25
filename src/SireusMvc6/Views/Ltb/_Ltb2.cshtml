@@ -1,0 +1,123 @@
+﻿@using Microsoft.AspNet.Mvc.Rendering;
+
+<div id="Lang" style="display: none;">sv</div>
+<div id="SetFocus" style="display: none;">IB0</div>
+
+<div class="col-md-12" id="Content0">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Dimensionering av LTB-lager</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <input id="ButtonCollapse" type="submit" class="btn btn-info pull-right " value="Dölj text" onclick="Collapse()" />
+                @*@Html.BootstrapButton("ButtonCollapse", "D&#246;lj text", Enums.ButtonPosition.Right, Enums.ButtonType.Submit, Enums.ButtonStyle.Info, Enums.ButtonSize.Normal, "Collapse()")*@
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4></h4>
+            </div>
+        </div>
+        <div>
+            <p>
+                Storleken på ett reservdelslager efter &quot;End of Production&quot; bör hållas på ett minimum för att spara kostnader, men inte för låg för att kunna tillhandahålla reservdelar under hela serviceperioden. Så länge som produktion av reservdelar pågår fylls lagret på med delar från fabrik. Om det är möjligt att reparera defekta delar kan också reparerade delar återanvändas som reservdelar. När produktionen har upphört är det inte längre möjligt att beställa reservdelar från fabrik. Det föreligger då ett behov av att säkra reservdelar för den återstående garantitiden eller serviceperioden. Serviceperioden inleds med &quot;Life Time Buy&quot;, LTB, och varar fram till &quot;End of Service&quot;, EOS. LTB är sista dagen för beställning av reservdelar från fabrik. Dimensionering av reservdelslager är baserad på Poissonfördelningen. Poissonfördelningen beskrivs i <a href="http://en.wikipedia.org/wiki/Poisson_distribution">Poisson Distribution</a>.
+            </p>
+        </div>
+        <br />
+        <h4 class="AlignLeft">
+            <strong>Algoritmen</strong>
+        </h4>
+        <div>
+            <p class="first">
+                Med denna <strong><em>unika</em></strong> algoritm kan installerad bas IB, felfrekvensen FR, antalet regionallager och reparationsförluster variera godtyckligt under serviceperioden. Reparationsförlusten är andelen av de enheter som skickas för repareration där reparationen misslyckas. Om reservdelar inte repareras är reparationsförlusten = 100%. Algoritmen bygger på dynamisk programmering där beräkningen börjar vid EOS, dvs serviceperiodens sista dag där den erforderliga lagernivån är känd och lika med antalet regionallager. Detta eftersom varje regionallager alltid måste ha minst en reservdel i lager för att kunna uppfylla kravet på högst två timmars leveranstid från regionallager till kund. Från EOS räknar algoritmen bakåt fram till LTB för att få den lagernivå som eftersöks. Reparationsledtiden LD, mätt i dagar, är väntetiden från det delen skickas till verkstad tills den kommer tillbaka. Omsättningslagret är den lagernivå som krävs under "Repair Lead Time" och beräknas enligt följande:
+            </p>
+            <p>
+                <strong>Omsättningslagret=IB*FR*LD/365 + Säkerhetsmarginal. </strong>Första delen av ekvationen,<strong> </strong>IB*FR*LD/365, är den genomsnittliga förbrukningen under Repair Lead Time. Poissonfördelningen används för att beräkna säkerhetsmarginalen för konfidensnivåerna 60% - 99,5%. Ekvationen som används vid denna beräkning beskrivs i <a href="http://sces.phys.utk.edu/~moreo/mm08/Haohu.pdf">Poisson Distribution and application</a>, ekvation (15) och (16).<br /><br /><strong>Failure Rate</strong> relaterar till <strong>Mean Time Between Failure, MTBF</strong>, på följande sätt: <strong>FR=1/MTBF</strong>.<br /><br />En presentation över konfidensinterval för Poisson-fördelningen hittas på länken nedan:
+            </p>
+        </div>
+        <div>
+            <p>
+                <a href="http://www.hep.fsu.edu/~harry/Public/Morelia2002-1.pdf">
+                    <img src="/Css/Images/button-CLs.gif" alt="download Poisson Confidence Levels" />
+                </a>
+            </p>
+        </div>
+        <h4 class="AlignLeft">
+            <strong>Parametrar</strong>
+        </h4>
+        <div>
+            <p class="first" style="font-size: small">
+                <strong>Parametrar tillämpliga för hela Serviceperioden.</strong>
+            </p>
+        </div>
+        <ul>
+            <li><strong>Life Time Buy:</strong> Sista dag för beställning av reservdelar från fabrik.</li>
+            <li><strong>End of Service:</strong> Serviceperiodens sista dag.</li>
+            <li> <strong>Konfidensnivå:</strong> Exempel: 95% konfidensnivå innebär att sannolikheten för att lagret skall vara tomt tidigare än EoS är 5%.</li>
+            <li><strong>Repair Lead Time:</strong> Tid i dagar från det ögonblick en reservdel skickas för reparation tills den kommer tillbaka.</li>
+        </ul>
+        <div>
+            <p class="style8">
+                <strong>Parametrar för varje år under serviceperioden</strong>
+            </p>
+        </div>
+        <ul>
+            <li><strong>Installed Base: </strong> Installerad bas i nätet per år.</li>
+            <li><strong> Regional Stocks:</strong> Antalet regionallager i servicenätet. Varje regionallager måste alltid ha minst en reservdel för att uppfylla kravet på högst 2 timmars leveranstid från ett regionalLager till kund. Därför utgör antalet regionallager en lägsta lagernivå vid EoS.</li>
+            <li><strong>Failure Rate: </strong>Genomsnittligt antal fel per år. <strong>FR= 1/MTBF.</strong></li>
+            <li><strong>Repair Loss: </strong> Andelen av delarna som skickas till reparation där reparationen misslyckas.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12" id="Content">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Utför beräkning</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h4></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-3 col-sm-3 text-left">
+                <input id="Calculate" type="submit" class="btn btn-info pull-left" value="Beräkna" onclick="Javascript:GetResult()" />
+            </div>
+            <div class="col-md-2 col-sm-2 text-left">
+                <div id="divInfoBox" style="display: none;">
+                    <strong>Räknar...</strong>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 text-left">
+                <input id="Clear" type="submit" class="btn btn-info pull-left" value="Sudda" onclick="location.href = '/LTB/Clear'" />
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <input id="ButtonCollapse1" type="submit" class="btn btn-info  " value="Visa text" onclick="Collapse()" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 "></div>
+                <div class="col-md-10 ">
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="divResult">
+        @await Html.PartialAsync("_Result")
+    </div>
+</div>
+

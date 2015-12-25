@@ -1,0 +1,99 @@
+﻿footer {
+    font-size: large;
+    text-align: center;
+}
+
+img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.panel-height_small { min-height: 185px; }
+
+/* Margins */
+
+.custom-pagemargin-top { margin-top: 80px; }
+
+.custom-itemmargin-top { margin-top: 20px; }
+
+.custom-itemmargin-bottom { margin-bottom: 20px; }
+
+.custom-row-spacing { margin-top: 10px; }
+
+/* Padding */
+
+.custom-no-horizontal-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.custom-no-vertical-padding {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.custom-no-padding { padding: 0px; }
+
+/* Modals */
+
+.custom-wide-modal { width: 900px; }
+
+/* Links */
+
+.custom-plain-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Borders */
+
+.custom-form-border { outline: 1px solid gray; }
+
+.custom-thumbnail {
+    border: 1px solid gray;
+    height: 70px;
+    width: 70px;
+}
+
+.custom-vertical-left-border {
+    border-left: 1px solid gray;
+    padding-right: 20px;
+}
+
+.custom-vertical-right-border {
+    border-right: 1px solid gray;
+    padding-left: 20px;
+}
+.custom-borders {
+   outline: 1px solid yellow;
+}
+
+/* Datepicker */
+
+.custom-late-task {
+    background-color: #D81900;
+    color: white;
+}
+
+/* Navbar (http://bootstrap3-menu.codedorigin.com/) */
+
+/*.navbar-inverse { background-color: #337ab7 }
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #2d6ba1 }
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #3276B1}
+.dropdown-menu { background-color: #FFFFFF}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #2d6ba1 }
+.navbar-inverse { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none}
+.navbar-inverse { border-color: #2d6ba1 }
+.navbar-inverse .navbar-brand { color: #EDEDED}
+.navbar-inverse .navbar-brand:hover { color: #FFFFFF}
+.navbar-inverse .navbar-nav>li>a { color: #EDEDED}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #FFFFFF}
+.dropdown-menu>li>a { color: #080808}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #EDEDED}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #EDEDED}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}*/

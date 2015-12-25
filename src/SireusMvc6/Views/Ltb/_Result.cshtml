@@ -1,0 +1,103 @@
+﻿@using Microsoft.AspNet.Mvc.Rendering;
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Resultat</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8 text-success BorderOutset">Totallager&nbsp;(ink.&nbsp;marg.):</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-8 text-success BorderInset">@ViewData["Total"]</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 text-success BorderOutset">Säkerhetsmarginal:</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-8 text-success BorderInset">@ViewData["Safety"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8 text-success BorderOutset">Lager&nbsp;(ingen&nbsp;marginal):</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-8 text-success BorderInset">@ViewData["Stock"]</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 text-success  BorderOutset">Falerade:</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-8 text-success  BorderInset">@ViewData["Failed"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8 text-success  BorderOutset">Lyckade&nbsp;reparationer:</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-8 text-success  BorderInset">@ViewData["Repaired"]</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8 text-success  BorderOutset">Servicedagar:</div>
+            </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row">
+                <div class="col-md-8 text-success  BorderInset">@ViewData["ServiceDays"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-4 text-success  BorderOutset">Antal&nbsp;misslyckade&nbsp;reparationer:</div>
+                <div class="col-md-2 text-success  BorderInset">@ViewData["Lost"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div id="divInfoText" class="col-md-10 text-danger BorderInset">@ViewData["InfoText"]</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="divInput">
+    @await Html.PartialAsync("_Input")
+</div>
