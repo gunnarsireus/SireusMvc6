@@ -19,17 +19,18 @@
         </div>
         <div class="col-md-3 col-sm-3 ">
             <div class="row">
-                <input class="col-md-5 col-sm-5  text-danger input-sm BorderInset" name="LTBDate" type="text" id="LTBDate" value="@ViewData["LTBDate"].ToString()" onchange="javascript:GetViewStateLTB();" />
+                <input class="col-md-5 col-sm-5  text-danger input-sm BorderInset" type="text" id="LTBDate" value="@ViewData["LTBDate"].ToString()" onchange="javascript:GetViewStateLTB();" />
             </div>
         </div>
         <div class="col-md-3 col-sm-3">
             <div class="row">
                 <div class="col-md-7 col-sm-7 text-danger BorderOutset">End&nbsp;Of&nbsp;Service:</div>
-                <input class="col-md-5 col-sm-5 text-danger BorderInset" name="EOSDate" type="text" id="EOSDate" value="@ViewData["EOSDate"].ToString()" onchange="javascript:GetViewStateEOS();" />
+                <input class="col-md-5 col-sm-5 text-danger BorderInset" type="text" id="EOSDate" value="@ViewData["EOSDate"].ToString()" onchange="javascript:GetViewStateEOS();" />
             </div>
         </div>
         <div class="col-md-3 col-sm-3">
             <div class="row">
+                <input class="datepicker" data-date-format="yyyy-mm-dd" type="text" id="EOSDate" data-date="@ViewData["EOSDate"].ToString()" onchange="javascript:GetViewStateEOS();" />
             </div>
         </div>
     </div>

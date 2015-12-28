@@ -75,31 +75,31 @@ function GetCss(spriteType, dayNumber) {
 
     switch (dayNumber) {
     case 0:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 0";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 0";
     case 1:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -81px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -81px";
     case 2:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -162px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -162px";
     case 3:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -243px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -243px";
     case 4:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -324px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -324px";
     case 5:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -405px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -405px";
     case 6:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -486px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -486px";
     case 7:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -567px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -567px";
     case 8:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -648px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -648px";
     case 9:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -729px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -729px";
     case 10:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -810px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -810px";
     case 11:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
     default:
-        return "transparent url('/Css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
+        return "transparent url('/css/Images/Bootstrap" + spriteType + "Composed.jpg') 0 -891px";
     }
 };
 
