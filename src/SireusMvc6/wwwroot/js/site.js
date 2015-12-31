@@ -10,7 +10,7 @@ $(document).ready(function () {
     if ($("#SetFocus").length > 0) {
         ErrorAlert();
         CheckHide();
-        $.datepicker.setDefaults($.datepicker.regional['sv']);
+        //$.datepicker.setDefaults($.datepicker.regional['sv']);
     }
 });
 

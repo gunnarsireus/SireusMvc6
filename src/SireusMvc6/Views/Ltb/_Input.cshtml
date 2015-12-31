@@ -19,18 +19,13 @@
         </div>
         <div class="col-md-3 col-sm-3 ">
             <div class="row">
-                <input class="col-md-5 col-sm-5  text-danger input-sm BorderInset" type="text" id="LTBDate" value="@ViewData["LTBDate"].ToString()" onchange="javascript:GetViewStateLTB();" />
+                <input class="col-md-5 col-sm-5  text-danger input-sm BorderInset" type="text" id="LTBDate" value="@ViewData["LTBDate"].ToString()" />
             </div>
         </div>
         <div class="col-md-3 col-sm-3">
             <div class="row">
                 <div class="col-md-7 col-sm-7 text-danger BorderOutset">End&nbsp;Of&nbsp;Service:</div>
-                <input class="col-md-5 col-sm-5 text-danger BorderInset" type="text" id="EOSDate" value="@ViewData["EOSDate"].ToString()" onchange="javascript:GetViewStateEOS();" />
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-3">
-            <div class="row">
-                <input class="datepicker" data-date-format="yyyy-mm-dd" type="text" id="EOSDate" data-date="@ViewData["EOSDate"].ToString()" onchange="javascript:GetViewStateEOS();" />
+                <input class="col-md-5 col-sm-5 text-danger BorderInset" type="text" id="EOSDate" value="@ViewData["EOSDate"].ToString()" />
             </div>
         </div>
     </div>
@@ -277,23 +272,18 @@
 <script type="text/javascript" src="/js/ltb.js"></script>
 
 <script type="text/javascript">
-    $(function () {
-        $.datepicker.setDefaults($.datepicker.regional["sv"]);
-        $("#LTBDate").datepicker({
-            changeMonth: true,
-            changeYear: true,
-            showWeek: true,
-            firstDay: 1
-        });
-
-        $(function () {
-            $.datepicker.setDefaults($.datepicker.regional["sv"]);
-            $("#EOSDate").datepicker({
-                changeMonth: true,
-                changeYear: true,
-                showWeek: true,
-                firstDay: 1
+            $(function () {
+                $('#EOSDate').datetimepicker({
+                    locale: 'sv',
+                    format: 'YYYY-MM-DD',
+                    calendarWeeks: true
+                }).on("dp.change", function (e) { GetViewStateEOS() });
             });
-        });
-    });
+            $(function () {
+                $('#LTBDate').datetimepicker({
+                    locale: 'sv',
+                    format: 'YYYY-MM-DD',
+                    calendarWeeks: true
+                }).on("dp.change", function (e) { GetViewStateLTB() });
+            });
 </script>
