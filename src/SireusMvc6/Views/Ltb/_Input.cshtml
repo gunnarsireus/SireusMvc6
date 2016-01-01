@@ -109,28 +109,26 @@
     <div class="row">
         <div class="hidden-md hidden-sm hidden-xs col-md-3">
         </div>
-        <div class="visible-sm visible-xs visible-md col-md-2 col-sm-2 col-xs-1 ">
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <div class="col-md-3 col-sm-3 BorderOutset red40">LTB</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;1år</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;2år</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;3år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset red40">LTB</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;1år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;2år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;3år</div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;4år</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;5år</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;6år</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;7år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;4år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;5år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;6år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;7år</div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;8år</div>
-                <div class="col-md-3 col-sm-3 BorderOutset">+&nbsp;9år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;8år</div>
+                <div class="col-md-3 col-sm-3 col-xs-3 BorderOutset">+&nbsp;9år</div>
                 <div class="col-md-6"></div>
             </div>
         </div>
@@ -142,29 +140,27 @@
                 <div class="col-md-10 col-sm-10 BorderOutset">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installed&nbsp;Base&nbsp;[0&nbsp;-&nbsp;99999]:</div>
             </div>
         </div>
-        <div class="visible-sm visible-xs visible-md col-md-2 col-sm-2 col-xs-1 ">
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckIB('IB0')" type="text" value="@ViewData["IB0"].ToString()" maxlength="5" id="IB0" tabindex="1" />
-                <input onchange="CheckIB('IB1')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB1ForeColor"].ToString()" type="text" value="@ViewData["IB1"].ToString()" maxlength="5" id="IB1" @Html.Raw(ViewData["IB1Disabled"].ToString()) tabindex="@ViewData["IB1TabIndex"].ToString()" />
-                <input onchange="CheckIB('IB2')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB2ForeColor"].ToString()" type="text" value="@ViewData["IB2"].ToString()" maxlength="5" id="IB2" @Html.Raw(ViewData["IB2Disabled"].ToString()) tabindex="@ViewData["IB2TabIndex"].ToString()" />
-                <input onchange="CheckIB('IB3')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB3ForeColor"].ToString()" type="text" value="@ViewData["IB3"].ToString()" maxlength="5" id="IB3" @Html.Raw(ViewData["IB3Disabled"].ToString()) tabindex="@ViewData["IB3TabIndex"].ToString()" />
+                <input placeholder="IB0" onchange="CheckIB('IB0')" class="col-md-3 col-sm-3 col-xs-3 BorderInset"  type="text" value="@ViewData["IB0"].ToString()" maxlength="5" id="IB0" tabindex="1" />
+                <input placeholder="IB1" onchange="CheckIB('IB1')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB1ForeColor"].ToString()" type="text" value="@ViewData["IB1"].ToString()" maxlength="5" id="IB1" @Html.Raw(ViewData["IB1Disabled"].ToString()) tabindex="@ViewData["IB1TabIndex"].ToString()" />
+                <input placeholder="IB2" onchange="CheckIB('IB2')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB2ForeColor"].ToString()" type="text" value="@ViewData["IB2"].ToString()" maxlength="5" id="IB2" @Html.Raw(ViewData["IB2Disabled"].ToString()) tabindex="@ViewData["IB2TabIndex"].ToString()" />
+                <input placeholder="IB3" onchange="CheckIB('IB3')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB3ForeColor"].ToString()" type="text" value="@ViewData["IB3"].ToString()" maxlength="5" id="IB3" @Html.Raw(ViewData["IB3Disabled"].ToString()) tabindex="@ViewData["IB3TabIndex"].ToString()" />
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input onchange="CheckIB('IB4')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB4ForeColor"].ToString()" type="text" value="@ViewData["IB4"].ToString()" maxlength="5" id="IB4" @Html.Raw(ViewData["IB4Disabled"].ToString()) tabindex="@ViewData["IB4TabIndex"].ToString()" />
-                <input onchange="CheckIB('IB5')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB5ForeColor"].ToString()" type="text" value="@ViewData["IB5"].ToString()" maxlength="5" id="IB5" @Html.Raw(ViewData["IB5Disabled"].ToString()) tabindex="@ViewData["IB5TabIndex"].ToString()" />
-                <input onchange="CheckIB('IB6')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB6ForeColor"].ToString()" type="text" value="@ViewData["IB6"].ToString()" maxlength="5" id="IB6" @Html.Raw(ViewData["IB6Disabled"].ToString()) tabindex="@ViewData["IB6TabIndex"].ToString()" />
-                <input onchange="CheckIB('IB7')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB7ForeColor"].ToString()" type="text" value="@ViewData["IB7"].ToString()" maxlength="5" id="IB7" @Html.Raw(ViewData["IB7Disabled"].ToString()) tabindex="@ViewData["IB7TabIndex"].ToString()" />
+                <input placeholder="IB4" onchange="CheckIB('IB4')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB4ForeColor"].ToString()" type="text" value="@ViewData["IB4"].ToString()" maxlength="5" id="IB4" @Html.Raw(ViewData["IB4Disabled"].ToString()) tabindex="@ViewData["IB4TabIndex"].ToString()" />
+                <input placeholder="IB5" onchange="CheckIB('IB5')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB5ForeColor"].ToString()" type="text" value="@ViewData["IB5"].ToString()" maxlength="5" id="IB5" @Html.Raw(ViewData["IB5Disabled"].ToString()) tabindex="@ViewData["IB5TabIndex"].ToString()" />
+                <input placeholder="IB6" onchange="CheckIB('IB6')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB6ForeColor"].ToString()" type="text" value="@ViewData["IB6"].ToString()" maxlength="5" id="IB6" @Html.Raw(ViewData["IB6Disabled"].ToString()) tabindex="@ViewData["IB6TabIndex"].ToString()" />
+                <input placeholder="IB7" onchange="CheckIB('IB7')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB7ForeColor"].ToString()" type="text" value="@ViewData["IB7"].ToString()" maxlength="5" id="IB7" @Html.Raw(ViewData["IB7Disabled"].ToString()) tabindex="@ViewData["IB7TabIndex"].ToString()" />
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input onchange="CheckIB('IB8')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB8ForeColor"].ToString()" type="text" value="@ViewData["IB8"].ToString()" maxlength="5" id="IB8" @Html.Raw(ViewData["IB8Disabled"].ToString()) tabindex="@ViewData["IB8TabIndex"].ToString()" />
-                <input onchange="CheckIB('IB9')" class="col-md-3 col-sm-3 BorderInset @ViewData["IB9ForeColor"].ToString()" type="text" value="@ViewData["IB9"].ToString()" maxlength="5" id="IB9" @Html.Raw(ViewData["IB9Disabled"].ToString()) tabindex="@ViewData["IB9TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset @ViewData["IB10ForeColor"].ToString()" type="text" value="@ViewData["IB10"].ToString()" maxlength="5" id="IB10" @Html.Raw(ViewData["IB10Disabled"].ToString()) tabindex="@ViewData["IB10TabIndex"].ToString()" />
+                <input placeholder="IB8" onchange="CheckIB('IB8')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB8ForeColor"].ToString()" type="text" value="@ViewData["IB8"].ToString()" maxlength="5" id="IB8" @Html.Raw(ViewData["IB8Disabled"].ToString()) tabindex="@ViewData["IB8TabIndex"].ToString()" />
+                <input placeholder="IB9" onchange="CheckIB('IB9')" class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB9ForeColor"].ToString()" type="text" value="@ViewData["IB9"].ToString()" maxlength="5" id="IB9" @Html.Raw(ViewData["IB9Disabled"].ToString()) tabindex="@ViewData["IB9TabIndex"].ToString()" />
+                <input class="col-md-3 col-sm-3 col-xs-3 BorderInset @ViewData["IB10ForeColor"].ToString()" type="text" value="@ViewData["IB10"].ToString()" maxlength="5" id="IB10" @Html.Raw(ViewData["IB10Disabled"].ToString()) tabindex="@ViewData["IB10TabIndex"].ToString()" />
             </div>
         </div>
     </div>
@@ -175,29 +171,27 @@
                 <div class="col-md-10 col-sm-10 BorderOutset">Failure&nbsp;Rate&nbsp;[0,00001&nbsp;-&nbsp;100]:</div>
             </div>
         </div>
-        <div class="visible-sm visible-xs visible-md col-md-2 col-sm-2 col-xs-1 ">
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR0')" type="text" value="@ViewData["FR0"].ToString()" maxlength="7" id="FR0" tabindex="@ViewData["FR0TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR1')" type="text" value="@ViewData["FR1"].ToString()" maxlength="7" id="FR1" @Html.Raw(ViewData["FR1Disabled"].ToString()) tabindex="@ViewData["FR1TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR2')" type="text" value="@ViewData["FR2"].ToString()" maxlength="7" id="FR2" @Html.Raw(ViewData["FR2Disabled"].ToString()) tabindex="@ViewData["FR2TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR3')" type="text" value="@ViewData["FR3"].ToString()" maxlength="7" id="FR3" @Html.Raw(ViewData["FR3Disabled"].ToString()) tabindex="@ViewData["FR3TabIndex"].ToString()" />
+                <input placeholder="FR0" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR0')" type="text" value="@ViewData["FR0"].ToString()" maxlength="7" id="FR0" tabindex="@ViewData["FR0TabIndex"].ToString()" />
+                <input placeholder="FR1" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR1')" type="text" value="@ViewData["FR1"].ToString()" maxlength="7" id="FR1" @Html.Raw(ViewData["FR1Disabled"].ToString()) tabindex="@ViewData["FR1TabIndex"].ToString()" />
+                <input placeholder="FR2" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR2')" type="text" value="@ViewData["FR2"].ToString()" maxlength="7" id="FR2" @Html.Raw(ViewData["FR2Disabled"].ToString()) tabindex="@ViewData["FR2TabIndex"].ToString()" />
+                <input placeholder="FR3" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR3')" type="text" value="@ViewData["FR3"].ToString()" maxlength="7" id="FR3" @Html.Raw(ViewData["FR3Disabled"].ToString()) tabindex="@ViewData["FR3TabIndex"].ToString()" />
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR4')" type="text" value="@ViewData["FR4"].ToString()" maxlength="7" id="FR4" @Html.Raw(ViewData["FR4Disabled"].ToString()) tabindex="@ViewData["FR4TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR5')" type="text" value="@ViewData["FR5"].ToString()" maxlength="7" id="FR5" @Html.Raw(ViewData["FR5Disabled"].ToString()) tabindex="@ViewData["FR5TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR6')" type="text" value="@ViewData["FR6"].ToString()" maxlength="7" id="FR6" @Html.Raw(ViewData["FR6Disabled"].ToString()) tabindex="@ViewData["FR6TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR7')" type="text" value="@ViewData["FR7"].ToString()" maxlength="7" id="FR7" @Html.Raw(ViewData["FR7Disabled"].ToString()) tabindex="@ViewData["FR7TabIndex"].ToString()" />
+                <input placeholder="FR4" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR4')" type="text" value="@ViewData["FR4"].ToString()" maxlength="7" id="FR4" @Html.Raw(ViewData["FR4Disabled"].ToString()) tabindex="@ViewData["FR4TabIndex"].ToString()" />
+                <input placeholder="FR5" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR5')" type="text" value="@ViewData["FR5"].ToString()" maxlength="7" id="FR5" @Html.Raw(ViewData["FR5Disabled"].ToString()) tabindex="@ViewData["FR5TabIndex"].ToString()" />
+                <input placeholder="FR6" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR6')" type="text" value="@ViewData["FR6"].ToString()" maxlength="7" id="FR6" @Html.Raw(ViewData["FR6Disabled"].ToString()) tabindex="@ViewData["FR6TabIndex"].ToString()" />
+                <input placeholder="FR7" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR7')" type="text" value="@ViewData["FR7"].ToString()" maxlength="7" id="FR7" @Html.Raw(ViewData["FR7Disabled"].ToString()) tabindex="@ViewData["FR7TabIndex"].ToString()" />
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR8')" type="text" value="@ViewData["FR8"].ToString()" maxlength="7" id="FR8" @Html.Raw(ViewData["FR8Disabled"].ToString()) tabindex="@ViewData["FR8TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR9')" type="text" value="@ViewData["FR9"].ToString()" maxlength="7" id="FR9" @Html.Raw(ViewData["FR9Disabled"].ToString()) tabindex="@ViewData["FR9TabIndex"].ToString()" />
-                <div class="col-md-3 col-sm-3"></div>
+                <input placeholder="FR8" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR8')" type="text" value="@ViewData["FR8"].ToString()" maxlength="7" id="FR8" @Html.Raw(ViewData["FR8Disabled"].ToString()) tabindex="@ViewData["FR8TabIndex"].ToString()" />
+                <input placeholder="FR9" class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckFR('FR9')" type="text" value="@ViewData["FR9"].ToString()" maxlength="7" id="FR9" @Html.Raw(ViewData["FR9Disabled"].ToString()) tabindex="@ViewData["FR9TabIndex"].ToString()" />
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
             </div>
         </div>
     </div>
@@ -208,29 +202,27 @@
                 <div class="col-md-10 col-sm-10 BorderOutset">Nbr&nbsp;of&nbsp;Reg.&nbsp;Stocks&nbsp;[0&nbsp;-&nbsp;9999]:</div>
             </div>
         </div>
-        <div class="visible-sm visible-xs visible-md col-md-2 col-sm-2 col-xs-1 ">
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS0')" type="text" value="@ViewData["RS0"].ToString()" maxlength="4" id="RS0" tabindex="@ViewData["RS0TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS1')" type="text" value="@ViewData["RS1"].ToString()" maxlength="4" id="RS1" @Html.Raw(ViewData["RS1Disabled"].ToString()) tabindex="@ViewData["RS1TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS2')" type="text" value="@ViewData["RS2"].ToString()" maxlength="4" id="RS2" @Html.Raw(ViewData["RS2Disabled"].ToString()) tabindex="@ViewData["RS2TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS3')" type="text" value="@ViewData["RS3"].ToString()" maxlength="4" id="RS3" @Html.Raw(ViewData["RS3Disabled"].ToString()) tabindex="@ViewData["RS3TabIndex"].ToString()" />
+                <input placeholder="RS0"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS0')" type="text" value="@ViewData["RS0"].ToString()" maxlength="4" id="RS0" tabindex="@ViewData["RS0TabIndex"].ToString()" />
+                <input placeholder="RS1"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS1')" type="text" value="@ViewData["RS1"].ToString()" maxlength="4" id="RS1" @Html.Raw(ViewData["RS1Disabled"].ToString()) tabindex="@ViewData["RS1TabIndex"].ToString()" />
+                <input placeholder="RS2"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS2')" type="text" value="@ViewData["RS2"].ToString()" maxlength="4" id="RS2" @Html.Raw(ViewData["RS2Disabled"].ToString()) tabindex="@ViewData["RS2TabIndex"].ToString()" />
+                <input placeholder="RS3"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS3')" type="text" value="@ViewData["RS3"].ToString()" maxlength="4" id="RS3" @Html.Raw(ViewData["RS3Disabled"].ToString()) tabindex="@ViewData["RS3TabIndex"].ToString()" />
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS4')" type="text" value="@ViewData["RS4"].ToString()" maxlength="4" id="RS4" @Html.Raw(ViewData["RS4Disabled"].ToString()) tabindex="@ViewData["RS4TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS5')" type="text" value="@ViewData["RS5"].ToString()" maxlength="4" id="RS5" @Html.Raw(ViewData["RS5Disabled"].ToString()) tabindex="@ViewData["RS5TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS6')" type="text" value="@ViewData["RS6"].ToString()" maxlength="4" id="RS6" @Html.Raw(ViewData["RS6Disabled"].ToString()) tabindex="@ViewData["RS6TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS7')" type="text" value="@ViewData["RS7"].ToString()" maxlength="4" id="RS7" @Html.Raw(ViewData["RS7Disabled"].ToString()) tabindex="@ViewData["RS7TabIndex"].ToString()" />
+                <input placeholder="RS4"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS4')" type="text" value="@ViewData["RS4"].ToString()" maxlength="4" id="RS4" @Html.Raw(ViewData["RS4Disabled"].ToString()) tabindex="@ViewData["RS4TabIndex"].ToString()" />
+                <input placeholder="RS5"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS5')" type="text" value="@ViewData["RS5"].ToString()" maxlength="4" id="RS5" @Html.Raw(ViewData["RS5Disabled"].ToString()) tabindex="@ViewData["RS5TabIndex"].ToString()" />
+                <input placeholder="RS6"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS6')" type="text" value="@ViewData["RS6"].ToString()" maxlength="4" id="RS6" @Html.Raw(ViewData["RS6Disabled"].ToString()) tabindex="@ViewData["RS6TabIndex"].ToString()" />
+                <input placeholder="RS7"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS7')" type="text" value="@ViewData["RS7"].ToString()" maxlength="4" id="RS7" @Html.Raw(ViewData["RS7Disabled"].ToString()) tabindex="@ViewData["RS7TabIndex"].ToString()" />
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS8')" type="text" value="@ViewData["RS8"].ToString()" maxlength="4" id="RS8" @Html.Raw(ViewData["RS8Disabled"].ToString()) tabindex="@ViewData["RS8TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS9')" type="text" value="@ViewData["RS9"].ToString()" maxlength="4" id="RS9" @Html.Raw(ViewData["RS9Disabled"].ToString()) tabindex="@ViewData["RS9TabIndex"].ToString()" />
-                <div class="col-md-3 col-sm-3"></div>
+                <input placeholder="RS8"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS8')" type="text" value="@ViewData["RS8"].ToString()" maxlength="4" id="RS8" @Html.Raw(ViewData["RS8Disabled"].ToString()) tabindex="@ViewData["RS8TabIndex"].ToString()" />
+                <input placeholder="RS9"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRS('RS9')" type="text" value="@ViewData["RS9"].ToString()" maxlength="4" id="RS9" @Html.Raw(ViewData["RS9Disabled"].ToString()) tabindex="@ViewData["RS9TabIndex"].ToString()" />
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
             </div>
         </div>
     </div>
@@ -241,29 +233,27 @@
                 <div class="col-md-10 col-sm-10 BorderOutset">Repair Loss [0 - 100%]:</div>
             </div>
         </div>
-        <div class="visible-sm visible-xs visible-md col-md-2 col-sm-2 col-xs-1 ">
-        </div>
         <div class="col-sm-4 col-md-3 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL0')" type="text" value="@ViewData["RL0"].ToString()" maxlength="4" id="RL0" @Html.Raw(ViewData["RL0Disabled"].ToString()) tabindex="@ViewData["RL0TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL1')" type="text" value="@ViewData["RL1"].ToString()" maxlength="4" id="RL1" @Html.Raw(ViewData["RL1Disabled"].ToString()) tabindex="@ViewData["RL1TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL2')" type="text" value="@ViewData["RL2"].ToString()" maxlength="4" id="RL2" @Html.Raw(ViewData["RL2Disabled"].ToString()) tabindex="@ViewData["RL2TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL3')" type="text" value="@ViewData["RL3"].ToString()" maxlength="4" id="RL3" @Html.Raw(ViewData["RL3Disabled"].ToString()) tabindex="@ViewData["RL3TabIndex"].ToString()" />
+                <input placeholder="RL0"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL0')" type="text" value="@ViewData["RL0"].ToString()" maxlength="4" id="RL0" @Html.Raw(ViewData["RL0Disabled"].ToString()) tabindex="@ViewData["RL0TabIndex"].ToString()" />
+                <input placeholder="RL1"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL1')" type="text" value="@ViewData["RL1"].ToString()" maxlength="4" id="RL1" @Html.Raw(ViewData["RL1Disabled"].ToString()) tabindex="@ViewData["RL1TabIndex"].ToString()" />
+                <input placeholder="RL2"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL2')" type="text" value="@ViewData["RL2"].ToString()" maxlength="4" id="RL2" @Html.Raw(ViewData["RL2Disabled"].ToString()) tabindex="@ViewData["RL2TabIndex"].ToString()" />
+                <input placeholder="RL3"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL3')" type="text" value="@ViewData["RL3"].ToString()" maxlength="4" id="RL3" @Html.Raw(ViewData["RL3Disabled"].ToString()) tabindex="@ViewData["RL3TabIndex"].ToString()" />
             </div>
         </div>
         <div class="col-sm-4 col-md-3 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL4')" type="text" value="@ViewData["RL4"].ToString()" maxlength="4" id="RL4" @Html.Raw(ViewData["RL4Disabled"].ToString()) tabindex="@ViewData["RL4TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL5')" type="text" value="@ViewData["RL5"].ToString()" maxlength="4" id="RL5" @Html.Raw(ViewData["RL5Disabled"].ToString()) tabindex="@ViewData["RL5TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL6')" type="text" value="@ViewData["RL6"].ToString()" maxlength="4" id="RL6" @Html.Raw(ViewData["RL6Disabled"].ToString()) tabindex="@ViewData["RL6TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL7')" type="text" value="@ViewData["RL7"].ToString()" maxlength="4" id="RL7" @Html.Raw(ViewData["RL7Disabled"].ToString()) tabindex="@ViewData["RL7TabIndex"].ToString()" />
+                <input placeholder="RL4"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL4')" type="text" value="@ViewData["RL4"].ToString()" maxlength="4" id="RL4" @Html.Raw(ViewData["RL4Disabled"].ToString()) tabindex="@ViewData["RL4TabIndex"].ToString()" />
+                <input placeholder="RL5"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL5')" type="text" value="@ViewData["RL5"].ToString()" maxlength="4" id="RL5" @Html.Raw(ViewData["RL5Disabled"].ToString()) tabindex="@ViewData["RL5TabIndex"].ToString()" />
+                <input placeholder="RL6"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL6')" type="text" value="@ViewData["RL6"].ToString()" maxlength="4" id="RL6" @Html.Raw(ViewData["RL6Disabled"].ToString()) tabindex="@ViewData["RL6TabIndex"].ToString()" />
+                <input placeholder="RL7"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL7')" type="text" value="@ViewData["RL7"].ToString()" maxlength="4" id="RL7" @Html.Raw(ViewData["RL7Disabled"].ToString()) tabindex="@ViewData["RL7TabIndex"].ToString()" />
             </div>
         </div>
         <div class="col-sm-4 col-md-3 col-xs-4">
             <div class="row">
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL8')" type="text" value="@ViewData["RL8"].ToString()" maxlength="4" id="RL8" @Html.Raw(ViewData["RL8Disabled"].ToString()) tabindex="@ViewData["RL8TabIndex"].ToString()" />
-                <input class="col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL9')" type="text" value="@ViewData["RL9"].ToString()" maxlength="4" id="RL9" @Html.Raw(ViewData["RL9Disabled"].ToString()) tabindex="@ViewData["RL9TabIndex"].ToString()" />
-                <div class="col-md-3 col-sm-3"></div>
+                <input placeholder="RL8"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL8')" type="text" value="@ViewData["RL8"].ToString()" maxlength="4" id="RL8" @Html.Raw(ViewData["RL8Disabled"].ToString()) tabindex="@ViewData["RL8TabIndex"].ToString()" />
+                <input placeholder="RL9"  class="col-md-3 col-sm-3 col-xs-3 BorderInset" onchange="CheckRL('RL9')" type="text" value="@ViewData["RL9"].ToString()" maxlength="4" id="RL9" @Html.Raw(ViewData["RL9Disabled"].ToString()) tabindex="@ViewData["RL9TabIndex"].ToString()" />
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
             </div>
         </div>
     </div>
