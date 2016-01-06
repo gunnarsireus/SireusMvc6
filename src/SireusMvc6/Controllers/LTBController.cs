@@ -269,10 +269,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR1TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS1TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL1TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB1Disabled"] = string.Empty;
-                        ViewData["RS1Disabled"] = string.Empty;
-                        ViewData["FR1Disabled"] = string.Empty;
-                        ViewData["RL1Disabled"] = string.Empty;
+                        ViewData["IB1Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB1\""));
+                        ViewData["RS1Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS1\""));
+                        ViewData["FR1Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR1\""));
+                        ViewData["RL1Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL1\""));
                         break;
                     case 1:
                         ViewBag.Year2 = "+2Year";
@@ -287,10 +287,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR2TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS2TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL2TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB2Disabled"] = string.Empty;
-                        ViewData["RS2Disabled"] = string.Empty;
-                        ViewData["FR2Disabled"] = string.Empty;
-                        ViewData["RL2Disabled"] = string.Empty;
+                        ViewData["IB2Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB2\""));
+                        ViewData["RS2Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS2\""));
+                        ViewData["FR2Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR2\""));
+                        ViewData["RL2Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL2\""));
                         break;
                     case 2:
                         ViewBag.Year3 = "+3Year";
@@ -305,10 +305,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR3TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS3TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL3TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB3Disabled"] = string.Empty;
-                        ViewData["RS3Disabled"] = string.Empty;
-                        ViewData["FR3Disabled"] = string.Empty;
-                        ViewData["RL3Disabled"] = string.Empty;
+                        ViewData["IB3Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB3\""));
+                        ViewData["RS3Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS3\""));
+                        ViewData["FR3Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR3\""));
+                        ViewData["RL3Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL3\""));
                         break;
                     case 3:
                         ViewBag.Year4 = "+4Year";
@@ -323,10 +323,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR4TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS4TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL4TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB4Disabled"] = string.Empty;
-                        ViewData["RS4Disabled"] = string.Empty;
-                        ViewData["FR4Disabled"] = string.Empty;
-                        ViewData["RL4Disabled"] = string.Empty;
+                        ViewData["IB4Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB4\""));
+                        ViewData["RS4Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS4\""));
+                        ViewData["FR4Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR4\""));
+                        ViewData["RL4Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL4\""));
                         break;
                     case 4:
                         ViewBag.Year5 = "+5Year";
@@ -341,10 +341,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR5TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS5TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL5TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB5Disabled"] = string.Empty;
-                        ViewData["RS5Disabled"] = string.Empty;
-                        ViewData["FR5Disabled"] = string.Empty;
-                        ViewData["RL5Disabled"] = string.Empty;
+                        ViewData["IB5Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB5\""));
+                        ViewData["RS5Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS5\""));
+                        ViewData["FR5Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR5\""));
+                        ViewData["RL5Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL5\""));
                         break;
                     case 5:
                         ViewBag.Year6 = "+6Year";
@@ -359,10 +359,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR6TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS6TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL6TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB6Disabled"] = string.Empty;
-                        ViewData["RS6Disabled"] = string.Empty;
-                        ViewData["FR6Disabled"] = string.Empty;
-                        ViewData["RL6Disabled"] = string.Empty;
+                        ViewData["IB6Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB6\""));
+                        ViewData["RS6Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS6\""));
+                        ViewData["FR6Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR6\""));
+                        ViewData["RL6Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL6\""));
                         break;
                     case 6:
                         ViewBag.Year7 = "+7Year";
@@ -377,10 +377,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR7TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS7TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL7TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB7Disabled"] = string.Empty;
-                        ViewData["RS7Disabled"] = string.Empty;
-                        ViewData["FR7Disabled"] = string.Empty;
-                        ViewData["RL7Disabled"] = string.Empty;
+                        ViewData["IB7Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB7\""));
+                        ViewData["RS7Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS7\""));
+                        ViewData["FR7Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR7\""));
+                        ViewData["RL7Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL7\""));
                         break;
                     case 7:
                         ViewBag.Year8 = "+8Year";
@@ -395,10 +395,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR8TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS8TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL8TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB8Disabled"] = string.Empty;
-                        ViewData["RS8Disabled"] = string.Empty;
-                        ViewData["FR8Disabled"] = string.Empty;
-                        ViewData["RL8Disabled"] = string.Empty;
+                        ViewData["IB8Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB8\""));
+                        ViewData["RS8Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS8\""));
+                        ViewData["FR8Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR8\""));
+                        ViewData["RL8Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL8\""));
                         break;
                     case 8:
                         ViewBag.Year9 = "+9Year";
@@ -413,10 +413,10 @@ namespace SireusMvc6.Controllers
                         ViewData["FR9TabIndex"] = _tabidx + nbrOfServiceYears;
                         ViewData["RS9TabIndex"] = _tabidx + 2*nbrOfServiceYears;
                         ViewData["RL9TabIndex"] = _tabidx + 3*nbrOfServiceYears;
-                        ViewData["IB9Disabled"] = string.Empty;
-                        ViewData["RS9Disabled"] = string.Empty;
-                        ViewData["FR9Disabled"] = string.Empty;
-                        ViewData["RL9Disabled"] = string.Empty;
+                        ViewData["IB9Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"IB9\""));
+                        ViewData["RS9Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RS9\""));
+                        ViewData["FR9Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"FR9\""));
+                        ViewData["RL9Disabled"] = new System.Web.Mvc.MvcHtmlString(string.Format("placeholder={0}", "\"RL9\""));
                         break;
                     case 9:
                         ViewData["IB10Disabled"] = string.Empty;
