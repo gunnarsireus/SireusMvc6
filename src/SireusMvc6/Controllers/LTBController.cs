@@ -1533,6 +1533,7 @@ namespace SireusMvc6.Controllers
             ViewData["Failed"] = _failed;
             ViewData["Repaired"] = _repaired;
             ViewData["Lost"] = _lost;
+            ViewData["InfoText"] = "Beräkning klar!";
             return 0;
         }
 
@@ -1541,7 +1542,7 @@ namespace SireusMvc6.Controllers
             _ltbChart = null;
             ViewData["Stock"] = string.Empty;
             ViewData["Safety"] = string.Empty;
-            ViewData["InfoText"] = string.Empty;
+            ViewData["InfoText"] = "Välj datum för Life Time Buy och End Of Service, ange parametervärden och tryck 'Beräkna'. ";
             ViewData["Failed"] = string.Empty;
             ViewData["Repaired"] = string.Empty;
             ViewData["Lost"] = string.Empty;
