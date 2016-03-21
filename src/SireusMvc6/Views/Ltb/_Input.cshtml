@@ -84,19 +84,42 @@
                 </div>
                 <div class="col-xs-6 col-md-6 col-sm-6 ">
                     <div class="row">
-                        <div id="rblRepair" class="col-xs-6 col-md-6 col-sm-6 text-warning BorderInset">
+                        <div id="rbRepair" class="col-xs-6 col-md-6 col-sm-6 text-warning BorderInset">
                             <label class="radio-inline">
-                                <input id="rblRepair_0" type="radio" name="rblRepair" value="Repair" @Html.Raw(ViewData["RepairChecked"].ToString()) onclick="@ViewData["Repair"].ToString()" />
+                                <input id="rbRepair_0" type="radio" name="rbRepair" value="Repair" @Html.Raw(ViewData["RepairChecked"].ToString()) onclick="@ViewData["RepairJavascript"].ToString()" />
                                 Ja
                             </label>
                             <label class="radio-inline">
-                                <input id="rblRepair_1" type="radio" name="rblRepair" value="No Repair" @Html.Raw(ViewData["NoRepairChecked"].ToString()) onclick="@ViewData["NoRepair"].ToString()" />
+                                <input id="rbRepair_1" type="radio" name="rbRepair" value="No Repair" @Html.Raw(ViewData["NoRepairChecked"].ToString()) onclick="@ViewData["NoRepairJavascript"].ToString()" />
                                 Nej
                             </label>
                         </div>
                     </div>
                 </div>
              </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-6 col-sm-6 ">
+                    <div class="row">
+                        <div class="col-xs-2 col-md-2 col-sm-2">
+                        </div>
+                        <div class="col-xs-10 col-md-10 col-sm-10 text-warning BorderOutset">MTBF&nbsp;eller&nbsp;Failure&nbsp;Rate?</div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-6 col-sm-6 ">
+                    <div class="row">
+                        <div id="rbMTBF" class="col-xs-6 col-md-6 col-sm-6 text-warning BorderInset">
+                            <label class="radio-inline">
+                                <input id="rbMTBF_0" type="radio" name="rbMTBF" value="Repair" @Html.Raw(ViewData["MTBFChecked"].ToString()) onclick="@ViewData["MTBFJavascript"].ToString()" />
+                                 MTBF
+                            </label>
+                            <label class="radio-inline">
+                                <input id="rbMTBF_1" type="radio" name="rbMTBF" value="No Repair" @Html.Raw(ViewData["NoMTBFChecked"].ToString()) onclick="@ViewData["NoMTBFJavascript"].ToString()" />
+                                 FR
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-xs-5 col-md-5 col-sm-5  text-center">
             <p><strong>Lagernivåer per år</strong></p>

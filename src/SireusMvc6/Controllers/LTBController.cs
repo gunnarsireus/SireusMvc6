@@ -33,6 +33,7 @@ namespace SireusMvc6.Controllers
         private static string _textInfo;
         private static int _tabidx;
         private static bool _repairSelected;
+        private static bool _mtbfSelected;
         // GET: /LTB/
 
         private static DateTime LifeTimeBuy { get; set; }
@@ -100,7 +101,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45], arg[46], arg[47], arg[48], arg[49]);
+                    arg[45], arg[46], arg[47], arg[48], arg[49], arg[50], arg[51]);
             }
             else
             {
@@ -108,7 +109,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45]);
+                    arg[45], arg[46], arg[47]);
             }
             var ci = new CultureInfo("sv-SE");
             ViewData["LTBDate"] = LifeTimeBuy.ToString("d", ci);
@@ -142,7 +143,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45], arg[46], arg[47], arg[48], arg[49]);
+                    arg[45], arg[46], arg[47], arg[48], arg[49], arg[50], arg[51]);
             }
             else
             {
@@ -150,7 +151,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45]);
+                    arg[45], arg[46], arg[47]);
             }
             var ci = new CultureInfo("sv-SE");
             ViewData["LTBDate"] = LifeTimeBuy.ToString("d", ci);
@@ -169,7 +170,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45], arg[46], arg[47], arg[48], arg[49]);
+                    arg[45], arg[46], arg[47], arg[48], arg[49], arg[50], arg[51]);
             }
             else
             {
@@ -177,7 +178,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45]);
+                    arg[45], arg[46], arg[47]);
             }
             var ci = new CultureInfo("sv-SE");
             ViewData["LTBDate"] = LifeTimeBuy.ToString("d", ci);
@@ -197,7 +198,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45], arg[46], arg[47], arg[48], arg[49]);
+                    arg[45], arg[46], arg[47], arg[48], arg[49], arg[50], arg[51]);
             }
             else
             {
@@ -205,7 +206,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45]);
+                    arg[45], arg[46], arg[47]);
             }
             return PartialView("_Ltb2");
         }
@@ -222,7 +223,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45], arg[46], arg[47], arg[48], arg[49]);
+                    arg[45], arg[46], arg[47], arg[48], arg[49], arg[50], arg[51]);
             }
             else
             {
@@ -230,7 +231,7 @@ namespace SireusMvc6.Controllers
                     arg[12], arg[13], arg[14], arg[15], arg[16], arg[17], arg[18], arg[19], arg[20], arg[21], arg[22],
                     arg[23], arg[24], arg[25], arg[26], arg[27], arg[28], arg[29], arg[30], arg[31], arg[32], arg[33],
                     arg[34], arg[35], arg[36], arg[37], arg[38], arg[39], arg[40], arg[41], arg[42], arg[43], arg[44],
-                    arg[45]);
+                    arg[45], arg[46], arg[47]);
             }
             return PartialView("_Ltb2");
         }
@@ -1574,12 +1575,12 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTBMM + '/' + LTBDD + '/' + LTBYY,
                 EOSMM + '/' + EOSDD + '/' + EOSYY, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8, IB9, IB10, RS0, RS1, RS2,
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
             _repairSelected = GetRepairSelected();
             InitYearTabIndex(_repairSelected);
@@ -1599,11 +1600,11 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTB, EOS, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8,
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
             _repairSelected = GetRepairSelected();
             InitYearTabIndex(_repairSelected);
@@ -1627,7 +1628,7 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             var ci = new CultureInfo("sv-SE");
             LifeTimeBuy = Convert.ToDateTime(LTB, ci);
@@ -1682,21 +1683,24 @@ namespace SireusMvc6.Controllers
             ViewData["RL7"] = RL7.Substring(1, RL7.Length - 1);
             ViewData["RL8"] = RL8.Substring(1, RL8.Length - 1);
             ViewData["RL9"] = RL9.Substring(1, RL9.Length - 1);
-            _repairSelected = GetRepairSelected();
-
-            if (!_repairSelected)
+            ViewData["rbRepair_0"] = rbRepair_0.Substring(1, rbRepair_0.Length - 1);
+            if (ViewData["rbRepair_0"].ToString() == "true")
             {
-                ViewData["Repair"] = "javascript:SetRepair();";
-                ViewData["NoRepair"] = "";
-                ViewData["RepairChecked"] = "";
-                ViewData["NoRepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+                InitRepairChecked();
             }
             else
             {
-                ViewData["Repair"] = "";
-                ViewData["NoRepair"] = "javascript:SetNoRepair();";
-                ViewData["RepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
-                ViewData["NoRepairChecked"] = "";
+                InitNoRepairChecked();
+            }
+
+            ViewData["rbMTBF_0"] = rbMTBF_0.Substring(1, rbMTBF_0.Length - 1);
+            if (ViewData["rbMTBF_0"].ToString() == "true")
+            {
+                InitMtbfChecked();
+            }
+            else
+            {
+                InitNoMtbfChecked();
             }
         }
 
@@ -1819,17 +1823,14 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTB, EOS, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8,
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
             ViewBag.SetFocus = "IB0";
-            ViewData["Repair"] = "";
-            ViewData["NoRepair"] = "javascript:SetNoRepair();";
-            ViewData["RepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
-            ViewData["NoRepairChecked"] = "";
+            InitRepairChecked();
             ClearResult();
             InitYearTabIndex(true);
             ViewBag.SetFocus = "IB0";
@@ -1844,17 +1845,14 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTBMM + '/' + LTBDD + '/' + LTBYY,
                 EOSMM + '/' + EOSDD + '/' + EOSYY, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8, IB9, IB10, RS0, RS1, RS2,
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
-            ViewData["Repair"] = "";
-            ViewData["NoRepair"] = "javascript:SetNoRepair();";
-            ViewData["RepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
-            ViewData["NoRepairChecked"] = "";
+            InitRepairChecked();
             ClearResult();
             InitYearTabIndex(true);
             ViewBag.SetFocus = "IB0";
@@ -1869,17 +1867,14 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTB, EOS, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8,
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
             SetPageDefaultValues();
-            ViewData["Repair"] = "javascript:SetRepair();";
-            ViewData["NoRepair"] = "";
-            ViewData["RepairChecked"] = "";
-            ViewData["NoRepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            InitNoRepairChecked();
             ClearResult();
             InitYearTabIndex(false);
             ViewBag.SetFocus = "IB0";
@@ -1894,18 +1889,15 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTBMM + '/' + LTBDD + '/' + LTBYY,
                 EOSMM + '/' + EOSDD + '/' + EOSYY, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8, IB9, IB10, RS0, RS1, RS2,
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
             SetPageDefaultValues();
-            ViewData["Repair"] = "javascript:SetRepair();";
-            ViewData["NoRepair"] = "";
-            ViewData["RepairChecked"] = "";
-            ViewData["NoRepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            InitNoRepairChecked();
             ClearResult();
             InitYearTabIndex(false);
             ViewBag.SetFocus = "IB0";
@@ -1999,12 +1991,12 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTBMM + '/' + LTBDD + '/' + LTBYY,
                 EOSMM + '/' + EOSDD + '/' + EOSYY, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8, IB9, IB10, RS0, RS1, RS2,
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
             var al = false;
             LtbChanged(out al);
@@ -2024,12 +2016,12 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTBMM + '/' + LTBDD + '/' + LTBYY,
                 EOSMM + '/' + EOSDD + '/' + EOSYY, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8, IB9, IB10, RS0, RS1, RS2,
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
             var al = false;
             EosChanged(out al);
@@ -2039,7 +2031,6 @@ namespace SireusMvc6.Controllers
             {
                 //ViewData["ErrorAlert"] = "ErrorAlert";
             }
-            ;
         }
 
         private void LtbDatesv(string confidenceLevelInPercent, string RLD, string LTB, string EOS, string IB0,
@@ -2050,11 +2041,11 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTB, EOS, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8,
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
             var al = false;
             LtbChanged(out al);
@@ -2074,11 +2065,11 @@ namespace SireusMvc6.Controllers
             string FR0, string FR1, string FR2, string FR3, string FR4, string FR5, string FR6, string FR7, string FR8,
             string FR9,
             string RL0, string RL1, string RL2, string RL3, string RL4, string RL5, string RL6, string RL7, string RL8,
-            string RL9)
+            string RL9, string rbRepair_0, string rbMTBF_0)
         {
             CopyInputToViewData(confidenceLevelInPercent, RLD, LTB, EOS, IB0, IB1, IB2, IB3, IB4, IB5, IB6, IB7, IB8,
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
-                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9);
+                FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
 
             var al = false;
@@ -2098,13 +2089,47 @@ namespace SireusMvc6.Controllers
             SetDefault_LTB_EOSDate();
             ViewData["ConfLevelInPercent"] = "60";
             ViewData["RepairLeadDays"] = "40";
-            ViewData["Repair"] = "javascript:SetRepair();";
-            ViewData["NoRepair"] = "";
-            ViewData["RepairChecked"] = "";
-            ViewData["NoRepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            InitNoRepairChecked();
+            InitMtbfChecked();
             AdjustForecolorAndClearRemains(0);
             InitYearTabIndex(false);
             InitConfidenceDropDown_CheckUI();
+        }
+
+        private void InitMtbfChecked()
+        {
+            ViewData["MTBFJavascript"] = "javascript:SetMtbf();";
+            ViewData["NoMTBFJavascript"] = "javascript:SetNoMtbf();";
+            ViewData["NoMTBFChecked"] = "";
+            ViewData["MTBFChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            _mtbfSelected = true;
+        }
+
+        private void InitNoRepairChecked()
+        {
+            ViewData["RepairJavascript"] = "javascript:SetRepair();";
+            ViewData["NoRepairJavascript"] = "";
+            ViewData["RepairChecked"] = "";
+            ViewData["NoRepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            _repairSelected = false;
+        }
+
+        private void InitNoMtbfChecked()
+        {
+            ViewData["MTBFJavascript"] = "javascript:SetMtbf();";
+            ViewData["NoMTBFJavascript"] = "javascript:SetNoMTBF();";
+            ViewData["MTBFChecked"] = "";
+            ViewData["NoMTBFChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            _mtbfSelected = false;
+        }
+
+        private void InitRepairChecked()
+        {
+            ViewData["RepairJavascript"] = "";
+            ViewData["NoRepairJavascript"] = "javascript:SetNoRepair();";
+            ViewData["NoRepairChecked"] = "";
+            ViewData["RepairChecked"] = new System.Web.Mvc.MvcHtmlString(string.Format("checked={0}", "\"checked\""));
+            _repairSelected = true;
         }
 
         private void CheckErrorAlert()

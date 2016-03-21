@@ -157,7 +157,9 @@ function GetViewState() {
         + $("#RL6").val() + "!_"
         + $("#RL7").val() + "!_"
         + $("#RL8").val() + "!_"
-        + $("#RL9").val();
+        + $("#RL9").val() + "!_"
+        + $("#rbRepair_0").is(":checked") + "!_"
+        + $("#rbMTBF_0").is(":checked");
 };
 
 var Exit = true;
@@ -235,7 +237,7 @@ function SetRepair() {
     handle.fail(function (data) {
         informUser(data.responseText);
     });
-}
+};
 
 function SetNoRepair() {
     var handle = $.post(
@@ -250,8 +252,15 @@ function SetNoRepair() {
     handle.fail(function (data) {
         informUser(data.responseText);
     });
-}
+};
 
+function SetMtbf() {
+    alert("SetMtbf");
+};
+
+function SetNoMtbf() {
+    alert("SetNoMtbf");
+};
 
 var _gaq = _gaq || [];
 _gaq.push(["_setAccount", "UA-31410005-1"]);
