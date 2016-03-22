@@ -29,7 +29,7 @@ function CheckFR(p) {
     if ($("#rbMTBF_0").is(":checked")) {
         var re = new RegExp("^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|100000|[0-9][.,][0-9][1-9])$");
         if (!re.test(GetVal())) {
-            alert("MTBF måste vara mellan 0.01 och 100000!");
+            alert("MTBF måste vara mellan 0,01 och 100000!");
             return false;
         } else {
             return true;
@@ -39,7 +39,7 @@ function CheckFR(p) {
     {
         var re = new RegExp("^([1-9]|[1-9][0-9]|100|[0-9][.,][0-9]{0,4}[1-9])$");
         if (!re.test(GetVal())) {
-            alert("Failure Rate måste vara mellan 0.00001 och 100!");
+            alert("Failure Rate måste vara mellan 0,00001 och 100!");
             return false;
         } else {
             return true;
