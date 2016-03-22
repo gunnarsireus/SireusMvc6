@@ -17,7 +17,7 @@ function CheckIB(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9][0-9]{0,4}|EoS)$");
     if (!re.test(GetVal())) {
-        alert(p + " must be within 0 and 99999!");
+        alert("Installed Base måste vara mellan 0 och 99999!");
         return false;
     } else {
         return true;
@@ -26,12 +26,24 @@ function CheckIB(p) {
 
 function CheckFR(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
-    var re = new RegExp("^([1-9]|[1-9][0-9]|100|[0-9][.,][0-9]{0,4}[1-9])$");
-    if (!re.test(GetVal())) {
-        alert(p + " must be within 0.00001 and 100!");
-        return false;
-    } else {
-        return true;
+    if ($("#rbMTBF_0").is(":checked")) {
+        var re = new RegExp("^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|100000|[0-9][.,][0-9][1-9])$");
+        if (!re.test(GetVal())) {
+            alert("MTBF måste vara mellan 0.01 och 100000!");
+            return false;
+        } else {
+            return true;
+        }
+    }
+    else
+    {
+        var re = new RegExp("^([1-9]|[1-9][0-9]|100|[0-9][.,][0-9]{0,4}[1-9])$");
+        if (!re.test(GetVal())) {
+            alert("Failure Rate måste vara mellan 0.00001 och 100!");
+            return false;
+        } else {
+            return true;
+        }
     }
 };
 
@@ -39,7 +51,7 @@ function CheckRS(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9][0-9]{0,4}|EoS)$");
     if (!re.test(GetVal())) {
-        alert(p + " must be within 0 and 9999!");
+        alert("Antal Regionlager måste vara mellan 0 och 9999!");
         return false;
     } else {
         return true;
@@ -50,7 +62,7 @@ function CheckRL(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9]|[1-9][0-9]|100)$");
     if (!re.test(GetVal())) {
-        alert(p + " must be within 0 and 100!");
+        alert("Repair Loss måste vara mellan 0 och 100%!");
         return false;
     } else {
         return true;
