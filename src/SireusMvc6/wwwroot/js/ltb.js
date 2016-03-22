@@ -257,11 +257,31 @@ function SetNoRepair() {
 function SetMtbf() {
     $("#divFR").addClass("hidden");
     $("#divMTBF").removeClass("hidden");
+    $("#FR0").attr("placeholder","MTBF0");
+    if ($("#FR1").attr("placeholder")) { $("#FR1").attr("placeholder", "MTBF1"); }
+    if ($("#FR2").attr("placeholder")) { $("#FR2").attr("placeholder", "MTBF2"); }
+    if ($("#FR3").attr("placeholder")) { $("#FR3").attr("placeholder", "MTBF3"); }
+    if ($("#FR4").attr("placeholder")) { $("#FR4").attr("placeholder", "MTBF4"); }
+    if ($("#FR5").attr("placeholder")) { $("#FR5").attr("placeholder", "MTBF5"); }
+    if ($("#FR6").attr("placeholder")) { $("#FR6").attr("placeholder", "MTBF6"); }
+    if ($("#FR7").attr("placeholder")) { $("#FR7").attr("placeholder", "MTBF7"); }
+    if ($("#FR8").attr("placeholder")) { $("#FR8").attr("placeholder", "MTBF8"); }
+    if ($("#FR9").attr("placeholder")) { $("#FR9").attr("placeholder", "MTBF9"); }
 };
 
 function SetNoMtbf() {
     $("#divFR").removeClass("hidden");
     $("#divMTBF").addClass("hidden");
+    $("#FR0").attr("placeholder", "FR0");
+    if ($("#FR1").attr("placeholder")) { $("#FR1").attr("placeholder", "FR1"); }
+    if ($("#FR2").attr("placeholder")) { $("#FR2").attr("placeholder", "FR2"); }
+    if ($("#FR3").attr("placeholder")) { $("#FR3").attr("placeholder", "FR3"); }
+    if ($("#FR4").attr("placeholder")) { $("#FR4").attr("placeholder", "FR4"); }
+    if ($("#FR5").attr("placeholder")) { $("#FR5").attr("placeholder", "FR5"); }
+    if ($("#FR6").attr("placeholder")) { $("#FR6").attr("placeholder", "FR6"); }
+    if ($("#FR7").attr("placeholder")) { $("#FR7").attr("placeholder", "FR7"); }
+    if ($("#FR8").attr("placeholder")) { $("#FR8").attr("placeholder", "FR8"); }
+    if ($("#FR9").attr("placeholder")) { $("#FR9").attr("placeholder", "FR9"); }
 };
 
 var _gaq = _gaq || [];

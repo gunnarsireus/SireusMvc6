@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
             <div class="row">
                 <div class="col-xs-6 col-md-6 col-sm-6 ">
                     <div class="row">
@@ -110,11 +110,11 @@
                         <div id="rbMTBF" class="col-xs-6 col-md-6 col-sm-6 text-warning BorderInset">
                             <label class="radio-inline">
                                 <input id="rbMTBF_0" type="radio" name="rbMTBF" value="Repair" @Html.Raw(ViewData["MTBFChecked"].ToString()) onclick="@ViewData["MTBFJavascript"].ToString()" />
-                                 MTBF
+                                MTBF
                             </label>
                             <label class="radio-inline">
                                 <input id="rbMTBF_1" type="radio" name="rbMTBF" value="No Repair" @Html.Raw(ViewData["NoMTBFChecked"].ToString()) onclick="@ViewData["NoMTBFJavascript"].ToString()" />
-                                 FR
+                                FR
                             </label>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
         </div>
         <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input onchange="CheckIB('IB0')" class="col-xs-3 col-md-3 col-sm-3 BorderInset"  type="text" value="@ViewData["IB0"].ToString()" maxlength="5" id="IB0" tabindex="1" placeholder="IB0" />
+                <input onchange="CheckIB('IB0')" class="col-xs-3 col-md-3 col-sm-3 BorderInset" type="text" value="@ViewData["IB0"].ToString()" maxlength="5" id="IB0" tabindex="1" placeholder="IB0" />
                 <input onchange="CheckIB('IB1')" class="col-xs-3 col-md-3 col-sm-3 BorderInset @ViewData["IB1ForeColor"].ToString()" type="text" value="@ViewData["IB1"].ToString()" maxlength="5" id="IB1" @Html.Raw(ViewData["IB1Disabled"].ToString()) tabindex="@ViewData["IB1TabIndex"].ToString()" />
                 <input onchange="CheckIB('IB2')" class="col-xs-3 col-md-3 col-sm-3 BorderInset @ViewData["IB2ForeColor"].ToString()" type="text" value="@ViewData["IB2"].ToString()" maxlength="5" id="IB2" @Html.Raw(ViewData["IB2Disabled"].ToString()) tabindex="@ViewData["IB2TabIndex"].ToString()" />
                 <input onchange="CheckIB('IB3')" class="col-xs-3 col-md-3 col-sm-3 BorderInset @ViewData["IB3ForeColor"].ToString()" type="text" value="@ViewData["IB3"].ToString()" maxlength="5" id="IB3" @Html.Raw(ViewData["IB3Disabled"].ToString()) tabindex="@ViewData["IB3TabIndex"].ToString()" />
@@ -195,12 +195,12 @@
             <div class="row">
                 <div class="col-xs-2 col-md-2 col-sm-2"></div>
                 <div id="divFR" class="col-xs-10 col-md-10 col-sm-10 BorderOutset hidden">Failure&nbsp;Rate&nbsp;[0,00001&nbsp;-&nbsp;100]:</div>
-                <div id="divMTBF" class="col-xs-10 col-md-10 col-sm-10 BorderOutset">&nbsp;MTBF&nbsp;[0,01&nbsp;-&nbsp;10000]:</div>
+                <div id="divMTBF" class="col-xs-10 col-md-10 col-sm-10 BorderOutset">&nbsp;MTBF&nbsp;[0,01&nbsp;-&nbsp;100000]:</div>
             </div>
         </div>
         <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR0')" type="text" value="@ViewData["FR0"].ToString()" maxlength="7" id="FR0" tabindex="@ViewData["FR0TabIndex"].ToString()" placeholder="FR0" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR0')" type="text" value="@ViewData["FR0"].ToString()" maxlength="7" id="FR0" tabindex="@ViewData["FR0TabIndex"].ToString()" placeholder="MTBF0" />
                 <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR1')" type="text" value="@ViewData["FR1"].ToString()" maxlength="7" id="FR1" @Html.Raw(ViewData["FR1Disabled"].ToString()) tabindex="@ViewData["FR1TabIndex"].ToString()" />
                 <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR2')" type="text" value="@ViewData["FR2"].ToString()" maxlength="7" id="FR2" @Html.Raw(ViewData["FR2Disabled"].ToString()) tabindex="@ViewData["FR2TabIndex"].ToString()" />
                 <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckFR('FR3')" type="text" value="@ViewData["FR3"].ToString()" maxlength="7" id="FR3" @Html.Raw(ViewData["FR3Disabled"].ToString()) tabindex="@ViewData["FR3TabIndex"].ToString()" />
@@ -231,10 +231,10 @@
         </div>
         <div class="col-md-3 col-sm-4 col-xs-4">
             <div class="row">
-                <input  class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS0')" type="text" value="@ViewData["RS0"].ToString()" maxlength="4" id="RS0" tabindex="@ViewData["RS0TabIndex"].ToString()" placeholder="RS0" />
-                <input  class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS1')" type="text" value="@ViewData["RS1"].ToString()" maxlength="4" id="RS1" @Html.Raw(ViewData["RS1Disabled"].ToString()) tabindex="@ViewData["RS1TabIndex"].ToString()" />
-                <input  class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS2')" type="text" value="@ViewData["RS2"].ToString()" maxlength="4" id="RS2" @Html.Raw(ViewData["RS2Disabled"].ToString()) tabindex="@ViewData["RS2TabIndex"].ToString()" />
-                <input  class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS3')" type="text" value="@ViewData["RS3"].ToString()" maxlength="4" id="RS3" @Html.Raw(ViewData["RS3Disabled"].ToString()) tabindex="@ViewData["RS3TabIndex"].ToString()" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS0')" type="text" value="@ViewData["RS0"].ToString()" maxlength="4" id="RS0" tabindex="@ViewData["RS0TabIndex"].ToString()" placeholder="RS0" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS1')" type="text" value="@ViewData["RS1"].ToString()" maxlength="4" id="RS1" @Html.Raw(ViewData["RS1Disabled"].ToString()) tabindex="@ViewData["RS1TabIndex"].ToString()" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS2')" type="text" value="@ViewData["RS2"].ToString()" maxlength="4" id="RS2" @Html.Raw(ViewData["RS2Disabled"].ToString()) tabindex="@ViewData["RS2TabIndex"].ToString()" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRS('RS3')" type="text" value="@ViewData["RS3"].ToString()" maxlength="4" id="RS3" @Html.Raw(ViewData["RS3Disabled"].ToString()) tabindex="@ViewData["RS3TabIndex"].ToString()" />
             </div>
         </div>
         <div class="col-md-3 col-sm-4 col-xs-4">
@@ -278,8 +278,8 @@
         </div>
         <div class="col-sm-4 col-md-3 col-xs-4">
             <div class="row">
-                <input  class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL8')" type="text" value="@ViewData["RL8"].ToString()" maxlength="4" id="RL8" @Html.Raw(ViewData["RL8Disabled"].ToString()) tabindex="@ViewData["RL8TabIndex"].ToString()" />
-                <input  class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL9')" type="text" value="@ViewData["RL9"].ToString()" maxlength="4" id="RL9" @Html.Raw(ViewData["RL9Disabled"].ToString()) tabindex="@ViewData["RL9TabIndex"].ToString()" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL8')" type="text" value="@ViewData["RL8"].ToString()" maxlength="4" id="RL8" @Html.Raw(ViewData["RL8Disabled"].ToString()) tabindex="@ViewData["RL8TabIndex"].ToString()" />
+                <input class="col-xs-3 col-md-3 col-sm-3 BorderInset" onchange="CheckRL('RL9')" type="text" value="@ViewData["RL9"].ToString()" maxlength="4" id="RL9" @Html.Raw(ViewData["RL9Disabled"].ToString()) tabindex="@ViewData["RL9TabIndex"].ToString()" />
                 <div class="col-xs-3 col-md-3 col-sm-3"></div>
             </div>
         </div>
@@ -289,18 +289,18 @@
 <script type="text/javascript" src="/js/ltb.js"></script>
 
 <script type="text/javascript">
-            $(function () {
-                $('#EOSDate').datetimepicker({
-                    locale: 'sv',
-                    format: 'YYYY-MM-DD',
-                    calendarWeeks: true
-                }).on("dp.change", function (e) { GetViewStateEOS() });
-            });
-            $(function () {
-                $('#LTBDate').datetimepicker({
-                    locale: 'sv',
-                    format: 'YYYY-MM-DD',
-                    calendarWeeks: true
-                }).on("dp.change", function (e) { GetViewStateLTB() });
-            });
+    $(function () {
+        $('#EOSDate').datetimepicker({
+            locale: 'sv',
+            format: 'YYYY-MM-DD',
+            calendarWeeks: true
+        }).on("dp.change", function (e) { GetViewStateEOS() });
+    });
+    $(function () {
+        $('#LTBDate').datetimepicker({
+            locale: 'sv',
+            format: 'YYYY-MM-DD',
+            calendarWeeks: true
+        }).on("dp.change", function (e) { GetViewStateLTB() });
+    });
 </script>
