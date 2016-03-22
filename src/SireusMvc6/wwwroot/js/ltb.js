@@ -255,11 +255,13 @@ function SetNoRepair() {
 };
 
 function SetMtbf() {
-    alert("SetMtbf");
+    $("#divFR").addClass("hidden");
+    $("#divMTBF").removeClass("hidden");
 };
 
 function SetNoMtbf() {
-    alert("SetNoMtbf");
+    $("#divFR").removeClass("hidden");
+    $("#divMTBF").addClass("hidden");
 };
 
 var _gaq = _gaq || [];

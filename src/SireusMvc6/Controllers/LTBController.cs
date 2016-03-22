@@ -860,6 +860,15 @@ namespace SireusMvc6.Controllers
             }
         }
 
+        double ConvertFrToMtbf(double d)
+        {
+            if (_mtbfSelected)
+            {
+                return 1 / d;
+            }
+            return d;
+        }
+
         private void GetInputData(int finalYear, ref double confidenceLevelFromNormsInv)
         {
             var ci = new CultureInfo("sv-SE");
@@ -914,7 +923,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS0ForeColor"] = Color.Black;
                         InstalledBasePerYear[0] = Convert.ToInt32(ViewData["IB0"].ToString());
                         RegionalStocksPerYear[0] = Convert.ToInt32(ViewData["RS0"].ToString());
-                        FailureRatePerYear[0] = Convert.ToDouble(ViewData["FR0"].ToString(), ci);
+                        FailureRatePerYear[0] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR0"].ToString(), ci));
                         RepairLossPerYear[0] = Convert.ToDouble(Convert.ToDouble(ViewData["RL0"].ToString())/100, ci);
 
                         break;
@@ -922,7 +931,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS1ForeColor"] = Color.Black;
                         InstalledBasePerYear[1] = Convert.ToInt32(ViewData["IB1"].ToString());
                         RegionalStocksPerYear[1] = Convert.ToInt32(ViewData["RS1"].ToString());
-                        FailureRatePerYear[1] = Convert.ToDouble(ViewData["FR1"].ToString(), ci);
+                        FailureRatePerYear[1] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR1"].ToString(), ci));
                         RepairLossPerYear[1] = Convert.ToDouble(Convert.ToDouble(ViewData["RL1"].ToString())/100, ci);
 
                         break;
@@ -930,7 +939,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS2ForeColor"] = Color.Black;
                         InstalledBasePerYear[2] = Convert.ToInt32(ViewData["IB2"].ToString());
                         RegionalStocksPerYear[2] = Convert.ToInt32(ViewData["RS2"].ToString());
-                        FailureRatePerYear[2] = Convert.ToDouble(ViewData["FR2"].ToString(), ci);
+                        FailureRatePerYear[2] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR2"].ToString(), ci));
                         RepairLossPerYear[2] = Convert.ToDouble(Convert.ToDouble(ViewData["RL2"].ToString())/100, ci);
 
                         break;
@@ -938,7 +947,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS3ForeColor"] = Color.Black;
                         InstalledBasePerYear[3] = Convert.ToInt32(ViewData["IB3"].ToString());
                         RegionalStocksPerYear[3] = Convert.ToInt32(ViewData["RS3"].ToString());
-                        FailureRatePerYear[3] = Convert.ToDouble(ViewData["FR3"].ToString(), ci);
+                        FailureRatePerYear[3] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR3"].ToString(), ci));
                         RepairLossPerYear[3] = Convert.ToDouble(Convert.ToDouble(ViewData["RL3"].ToString())/100, ci);
 
                         break;
@@ -946,7 +955,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS4ForeColor"] = Color.Black;
                         InstalledBasePerYear[4] = Convert.ToInt32(ViewData["IB4"].ToString());
                         RegionalStocksPerYear[4] = Convert.ToInt32(ViewData["RS4"].ToString());
-                        FailureRatePerYear[4] = Convert.ToDouble(ViewData["FR4"].ToString(), ci);
+                        FailureRatePerYear[4] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR4"].ToString(), ci));
                         RepairLossPerYear[4] = Convert.ToDouble(Convert.ToDouble(ViewData["RL4"].ToString())/100, ci);
 
                         break;
@@ -954,7 +963,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS5ForeColor"] = Color.Black;
                         InstalledBasePerYear[5] = Convert.ToInt32(ViewData["IB5"].ToString());
                         RegionalStocksPerYear[5] = Convert.ToInt32(ViewData["RS5"].ToString());
-                        FailureRatePerYear[5] = Convert.ToDouble(ViewData["FR5"].ToString(), ci);
+                        FailureRatePerYear[5] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR5"].ToString(), ci));
                         RepairLossPerYear[5] = Convert.ToDouble(Convert.ToDouble(ViewData["RL5"].ToString())/100, ci);
 
                         break;
@@ -962,7 +971,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS6ForeColor"] = Color.Black;
                         InstalledBasePerYear[6] = Convert.ToInt32(ViewData["IB6"].ToString());
                         RegionalStocksPerYear[6] = Convert.ToInt32(ViewData["RS6"].ToString());
-                        FailureRatePerYear[6] = Convert.ToDouble(ViewData["FR6"].ToString(), ci);
+                        FailureRatePerYear[6] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR6"].ToString(), ci));
                         RepairLossPerYear[6] = Convert.ToDouble(Convert.ToDouble(ViewData["RL6"].ToString())/100, ci);
 
                         break;
@@ -970,7 +979,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS7ForeColor"] = Color.Black;
                         InstalledBasePerYear[7] = Convert.ToInt32(ViewData["IB7"].ToString());
                         RegionalStocksPerYear[7] = Convert.ToInt32(ViewData["RS7"].ToString());
-                        FailureRatePerYear[7] = Convert.ToDouble(ViewData["FR7"].ToString(), ci);
+                        FailureRatePerYear[7] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR7"].ToString(), ci));
                         RepairLossPerYear[7] = Convert.ToDouble(Convert.ToDouble(ViewData["RL7"].ToString())/100, ci);
 
                         break;
@@ -978,7 +987,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS8ForeColor"] = Color.Black;
                         InstalledBasePerYear[8] = Convert.ToInt32(ViewData["IB8"].ToString());
                         RegionalStocksPerYear[8] = Convert.ToInt32(ViewData["RS8"].ToString());
-                        FailureRatePerYear[8] = Convert.ToDouble(ViewData["FR8"].ToString(), ci);
+                        FailureRatePerYear[8] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR8"].ToString(), ci));
                         RepairLossPerYear[8] = Convert.ToDouble(Convert.ToDouble(ViewData["RL8"].ToString())/100, ci);
 
                         break;
@@ -986,7 +995,7 @@ namespace SireusMvc6.Controllers
                         ViewData["RS9ForeColor"] = Color.Black;
                         InstalledBasePerYear[9] = Convert.ToInt32(ViewData["IB9"].ToString());
                         RegionalStocksPerYear[9] = Convert.ToInt32(ViewData["RS9"].ToString());
-                        FailureRatePerYear[9] = Convert.ToDouble(ViewData["FR9"].ToString(), ci);
+                        FailureRatePerYear[9] = ConvertFrToMtbf(Convert.ToDouble(ViewData["FR9"].ToString(), ci));
                         RepairLossPerYear[9] = Convert.ToDouble(Convert.ToDouble(ViewData["RL9"].ToString())/100, ci);
 
                         break;
@@ -1160,8 +1169,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB0"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS0"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS0"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR0"].ToString(), ci) < 1E-07 |
-                            Convert.ToDouble(ViewData["FR0"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR0"].ToString(), ci)) < 1E-07 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR0"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL0"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL0"].ToString()) > 100)
                         {
@@ -1191,8 +1200,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB1"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS1"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS1"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR1"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR1"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR1"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR1"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL1"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL1"].ToString()) > 100)
                         {
@@ -1222,8 +1231,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB2"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS2"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS2"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR2"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR2"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR2"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR2"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL2"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL2"].ToString()) > 100)
                         {
@@ -1253,8 +1262,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB3"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS3"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS3"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR3"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR3"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR3"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR3"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL3"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL3"].ToString()) > 100)
                         {
@@ -1284,8 +1293,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB4"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS4"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS4"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR4"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR4"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR4"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR4"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL4"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL4"].ToString()) > 100)
                         {
@@ -1315,8 +1324,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB5"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS5"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS5"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR5"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR5"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR5"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR5"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL5"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL5"].ToString()) > 100)
                         {
@@ -1346,8 +1355,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB6"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS6"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS6"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR6"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR6"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR6"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR6"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL6"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL6"].ToString()) > 100)
                         {
@@ -1377,8 +1386,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB7"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS7"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS7"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR7"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR7"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR7"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR7"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL7"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL7"].ToString()) > 100)
                         {
@@ -1408,8 +1417,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB8"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS8"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS8"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR8"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR8"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR8"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR8"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL8"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL8"].ToString()) > 100)
                         {
@@ -1439,8 +1448,8 @@ namespace SireusMvc6.Controllers
                             Convert.ToInt32(ViewData["IB9"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS9"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RS9"].ToString()) > 9999 |
-                            Convert.ToDouble(ViewData["FR9"].ToString(), ci) < 1E-06 |
-                            Convert.ToDouble(ViewData["FR9"].ToString(), ci) > 100 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR9"].ToString(), ci)) < 1E-06 |
+                            ConvertFrToMtbf(Convert.ToDouble(ViewData["FR9"].ToString(), ci)) > 100 |
                             Convert.ToInt32(ViewData["RL9"].ToString()) < 0 |
                             Convert.ToInt32(ViewData["RL9"].ToString()) > 100)
                         {
@@ -1582,7 +1591,7 @@ namespace SireusMvc6.Controllers
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
                 FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
-            _repairSelected = GetRepairSelected();
+           // _repairSelected = GetRepairSelected();
             InitYearTabIndex(_repairSelected);
             ViewBag.SetFocus = "IB0";
             InitConfidenceDropDown_CheckUI();
@@ -1606,7 +1615,7 @@ namespace SireusMvc6.Controllers
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
                 FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
             ClearResult();
-            _repairSelected = GetRepairSelected();
+            //_repairSelected = GetRepairSelected();
             InitYearTabIndex(_repairSelected);
             ViewBag.SetFocus = "IB0";
             InitConfidenceDropDown_CheckUI();
@@ -1686,21 +1695,21 @@ namespace SireusMvc6.Controllers
             ViewData["rbRepair_0"] = rbRepair_0.Substring(1, rbRepair_0.Length - 1);
             if (ViewData["rbRepair_0"].ToString() == "true")
             {
-                InitRepairChecked();
+                SetRepairChecked();
             }
             else
             {
-                InitNoRepairChecked();
+                SetNoRepairChecked();
             }
 
             ViewData["rbMTBF_0"] = rbMTBF_0.Substring(1, rbMTBF_0.Length - 1);
             if (ViewData["rbMTBF_0"].ToString() == "true")
             {
-                InitMtbfChecked();
+                SetMtbfChecked();
             }
             else
             {
-                InitNoMtbfChecked();
+                SetNoMtbfChecked();
             }
         }
 
@@ -1829,8 +1838,7 @@ namespace SireusMvc6.Controllers
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
                 FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
-            ViewBag.SetFocus = "IB0";
-            InitRepairChecked();
+           // SetRepairChecked();
             ClearResult();
             InitYearTabIndex(true);
             ViewBag.SetFocus = "IB0";
@@ -1852,7 +1860,7 @@ namespace SireusMvc6.Controllers
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
                 FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
-            InitRepairChecked();
+           // SetRepairChecked();
             ClearResult();
             InitYearTabIndex(true);
             ViewBag.SetFocus = "IB0";
@@ -1873,8 +1881,8 @@ namespace SireusMvc6.Controllers
                 IB9, IB10, RS0, RS1, RS2, RS3, RS4, RS5, RS6, RS7, RS8, RS9,
                 FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
-            SetPageDefaultValues();
-            InitNoRepairChecked();
+            //SetPageDefaultValues();
+            //SetNoRepairChecked();
             ClearResult();
             InitYearTabIndex(false);
             ViewBag.SetFocus = "IB0";
@@ -1896,8 +1904,8 @@ namespace SireusMvc6.Controllers
                 RS3, RS4, RS5, RS6, RS7, RS8, RS9,
                 FR0, FR1, FR2, FR3, FR4, FR5, FR6, FR7, FR8, FR9, RL0, RL1, RL2, RL3, RL4, RL5, RL6, RL7, RL8, RL9, rbRepair_0, rbMTBF_0);
 
-            SetPageDefaultValues();
-            InitNoRepairChecked();
+            //SetPageDefaultValues();
+            //SetNoRepairChecked();
             ClearResult();
             InitYearTabIndex(false);
             ViewBag.SetFocus = "IB0";
@@ -1912,8 +1920,7 @@ namespace SireusMvc6.Controllers
             LifeTimeBuy = startDate;
             var endDate = Convert.ToDateTime(ViewData["EOSDate"].ToString(), ci);
             EndOfService = endDate;
-            //var ltmp = startDate.ToString();
-            //var etmp = endDate.ToString();
+;
             if (DateTimeUtil.DateDiff(DateTimeUtil.DateInterval.Day, startDate, endDate) > LtbCommon.MaxServiceDays)
             {
                 EndOfService = startDate.AddDays(LtbCommon.MaxServiceDays);
@@ -1927,16 +1934,13 @@ namespace SireusMvc6.Controllers
                     Convert.ToDateTime(ViewData["EOSDate"].ToString(), ci)) < LtbCommon.MinLeadDays)
             {
                 EndOfService = startDate.AddDays(LtbCommon.MinLeadDays);
-                //etmp = startDate.AddDays(LtbCommon.MinLeadDays).ToString();
+;
                 ViewData["InfoText"] =
                     "Fel: Serviceperioden får ej vara längre än 10 år. Vänligen ändra EoS eller LTB";
                 alert = true;
             }
-            //etmp = Convert.ToDateTime(etmp, ci).ToString();
-            //ltmp = Convert.ToDateTime(ltmp, ci).ToString();
-            //ViewData["LTBDate"] = ltmp.Substring(0, ltmp.IndexOf(" "));
-            //ViewData["EOSDate"] = etmp.Substring(0, etmp.IndexOf(" "));
-            _repairSelected = GetRepairSelected();
+
+            //_repairSelected = GetRepairSelected();
 
             ViewData["LTBDate"] = LifeTimeBuy.ToString("d", ci);
             ViewData["EOSDate"] = EndOfService.ToString("d", ci);
@@ -1972,11 +1976,8 @@ namespace SireusMvc6.Controllers
                     "Fel: Serviceperioden får ej vara längre än 10 år. Vänligen ändra EoS eller LTB";
                 alert = true;
             }
-            //etmp = Convert.ToDateTime(etmp, ci).ToString();
-            //ltmp = Convert.ToDateTime(ltmp, ci).ToString();
-            //ViewData["LTBDate"] = ltmp.Substring(0, ltmp.IndexOf(" "));
-            //ViewData["EOSDate"] = etmp.Substring(0, etmp.IndexOf(" "));
-            _repairSelected = GetRepairSelected();
+
+            //_repairSelected = GetRepairSelected();
 
             ViewData["LTBDate"] = LifeTimeBuy.ToString("d", ci);
             ViewData["EOSDate"] = EndOfService.ToString("d", ci);
@@ -2084,19 +2085,18 @@ namespace SireusMvc6.Controllers
 
         private void SetPageDefaultValues()
         {
-            _repairSelected = false;
             ClearResult();
             SetDefault_LTB_EOSDate();
             ViewData["ConfLevelInPercent"] = "60";
             ViewData["RepairLeadDays"] = "40";
-            InitNoRepairChecked();
-            InitMtbfChecked();
+            SetNoRepairChecked();
+            SetMtbfChecked();
             AdjustForecolorAndClearRemains(0);
             InitYearTabIndex(false);
             InitConfidenceDropDown_CheckUI();
         }
 
-        private void InitMtbfChecked()
+        private void SetMtbfChecked()
         {
             ViewData["MTBFJavascript"] = "javascript:SetMtbf();";
             ViewData["NoMTBFJavascript"] = "javascript:SetNoMtbf();";
@@ -2105,7 +2105,7 @@ namespace SireusMvc6.Controllers
             _mtbfSelected = true;
         }
 
-        private void InitNoRepairChecked()
+        private void SetNoRepairChecked()
         {
             ViewData["RepairJavascript"] = "javascript:SetRepair();";
             ViewData["NoRepairJavascript"] = "";
@@ -2114,7 +2114,7 @@ namespace SireusMvc6.Controllers
             _repairSelected = false;
         }
 
-        private void InitNoMtbfChecked()
+        private void SetNoMtbfChecked()
         {
             ViewData["MTBFJavascript"] = "javascript:SetMtbf();";
             ViewData["NoMTBFJavascript"] = "javascript:SetNoMTBF();";
@@ -2123,7 +2123,7 @@ namespace SireusMvc6.Controllers
             _mtbfSelected = false;
         }
 
-        private void InitRepairChecked()
+        private void SetRepairChecked()
         {
             ViewData["RepairJavascript"] = "";
             ViewData["NoRepairJavascript"] = "javascript:SetNoRepair();";
