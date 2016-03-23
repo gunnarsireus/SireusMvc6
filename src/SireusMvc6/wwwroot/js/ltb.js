@@ -92,7 +92,9 @@ function GetResult() {
     if (!CheckRL("RL0")) {
         return false;
     }
+    if (!Exit) return;
     ProgressOn();
+
     $("#divStock").empty();
     $("#divSafety").empty();
     $("#divRepaired").empty();
@@ -177,12 +179,18 @@ function GetViewState() {
 var Exit = true;
 
 function ProgressOn() {
+    $("#divInfoText").addClass("hidden");
+    $("#divInfoTextHidden").removeClass("hidden");
     divInfoBox.style.display = "";
     Exit = false;
     blink("#divInfoBox");
 }
 
-function ProgressOff() { Exit = true; }
+function ProgressOff() {
+    $("#divInfoText").removeClass("hidden");
+    $("#divInfoTextHidden").addClass("hidden");
+    Exit = true;
+}
 
 function ErrorAlert() {
     if ($("#divErrorAlert").text() === "ErrorAlert") {
