@@ -1469,7 +1469,7 @@ namespace SireusMvc6.Controllers
                 ViewData["InfoText"] = _textInfo;
                 return -1;
             }
-            _leadDays = Convert.ToInt32(ViewData["RepairLeadDays"].ToString());
+            _leadDays = (_repairSelected)?Convert.ToInt32(ViewData["RepairLeadDays"].ToString()):2;
             if (_leadDays < LtbCommon.MinLeadDays | _leadDays > LtbCommon.MaxLeadDays)
             {
                 _textInfo = "Fel: 2 <= Repair Lead Time <=365";
