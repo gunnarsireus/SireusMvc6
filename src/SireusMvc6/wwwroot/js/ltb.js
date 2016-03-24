@@ -92,7 +92,7 @@ function GetResult() {
     if (!CheckRL("RL0")) {
         return false;
     }
-    if (!Exit) return;
+    if (!calculationFinished) return;
     ProgressOn();
 
     $("#divStock").empty();
@@ -176,20 +176,20 @@ function GetViewState() {
         + $("#rbMTBF_0").is(":checked");
 };
 
-var Exit = true;
+var calculationFinished = true;
 
 function ProgressOn() {
     $("#divInfoText").addClass("hidden");
     $("#divInfoTextHidden").removeClass("hidden");
     divInfoBox.style.display = "";
-    Exit = false;
+    calculationFinished = false;
     blink("#divInfoBox");
 }
 
 function ProgressOff() {
     $("#divInfoText").removeClass("hidden");
     $("#divInfoTextHidden").addClass("hidden");
-    Exit = true;
+    calculationFinished = true;
 }
 
 function ErrorAlert() {
@@ -199,12 +199,12 @@ function ErrorAlert() {
 }
 
 function blink(selector) {
-    if (Exit === true) {
+    if (calculationFinished === true) {
         selector.style.display = "none";
         return false;
     }
     $(selector).fadeOut("slow", function () {
-        if (Exit === false) {
+        if (calculationFinished === false) {
             $(this).fadeIn("slow", function () { blink(this); });
         } else {
             $(selector).fadeOut("slow");
