@@ -38,10 +38,10 @@
         </h4>
         <div>
             <p class="first">
-                Med denna <strong><em>unika</em></strong> algoritm kan installerad bas IB, felfrekvensen FR, antalet regionallager och reparationsförluster variera godtyckligt under serviceperioden. Reparationsförlusten är andelen av de enheter som skickas för repareration där reparationen misslyckas. Om reservdelar inte repareras är reparationsförlusten = 100%. Algoritmen bygger på dynamisk programmering där beräkningen börjar vid EOS, dvs serviceperiodens sista dag där den erforderliga lagernivån är känd och lika med antalet regionallager. Detta eftersom varje regionallager alltid måste ha minst en reservdel i lager för att kunna uppfylla kravet på högst två timmars leveranstid från regionallager till kund. Från EOS räknar algoritmen bakåt fram till LTB för att få den lagernivå som eftersöks. Reparationsledtiden LD, mätt i dagar, är väntetiden från det delen skickas till verkstad tills den kommer tillbaka. Omsättningslagret är den lagernivå som krävs under "Repair Lead Time" och beräknas enligt följande:
+                Med denna <strong><em>unika</em></strong> algoritm kan installerad bas IB, felfrekvensen FR, antalet regionallager och reparationsförluster variera godtyckligt under serviceperioden. Reparationsförlusten är andelen av de enheter som skickas för repareration där reparationen misslyckas. Om reservdelar inte repareras är reparationsförlusten = 100%. Algoritmen bygger på dynamisk programmering där beräkningen börjar vid EOS, dvs serviceperiodens sista dag där den erforderliga lagernivån är känd och lika med antalet regionallager. Detta eftersom varje regionallager alltid måste ha minst en reservdel i lager för att kunna uppfylla kravet på högst två timmars leveranstid från regionallager till kund. Från EOS räknar algoritmen bakåt fram till LTB för att få den lagernivå som eftersöks. Reparationsledtiden LD, mätt i dagar, är väntetiden från det delen skickas till verkstad tills den kommer tillbaka. Omsättningslagret är den lagernivå som krävs under "Reparationsledtiden" och beräknas enligt följande:
             </p>
             <p>
-                <strong>Omsättningslagret=IB*FR*LD/365 + Säkerhetsmarginal. </strong>Första delen av ekvationen,<strong> </strong>IB*FR*LD/365, är den genomsnittliga förbrukningen under Repair Lead Time. Poissonfördelningen används för att beräkna säkerhetsmarginalen för konfidensnivåerna 60% - 99,5%. Ekvationen som används vid denna beräkning beskrivs i <a href="http://sces.phys.utk.edu/~moreo/mm08/Haohu.pdf">Poisson Distribution and application</a>, ekvation (15) och (16).<br /><br /><strong>Failure Rate</strong> relaterar till <strong>Mean Time Between Failure, MTBF</strong>, på följande sätt: <strong>FR=1/MTBF</strong>.<br /><br />En presentation över konfidensinterval för Poisson-fördelningen hittas på länken nedan:
+                <strong>Omsättningslagret=IB*FR*LD/365 + Säkerhetsmarginal. </strong>Första delen av ekvationen,<strong> </strong>IB*FR*LD/365, är den genomsnittliga förbrukningen under Reparationsledtiden. Poissonfördelningen används för att beräkna säkerhetsmarginalen för konfidensnivåerna 60% - 99,5%. Ekvationen som används vid denna beräkning beskrivs i <a href="http://sces.phys.utk.edu/~moreo/mm08/Haohu.pdf">Poisson Distribution and application</a>, ekvation (15) och (16).<br /><br /><strong>Failure Rate</strong> relaterar till <strong>Mean Time Between Failure, MTBF</strong>, på följande sätt: <strong>FR=1/MTBF</strong>.<br /><br />En presentation över konfidensinterval för Poisson-fördelningen hittas på länken nedan:
             </p>
         </div>
         <div>
@@ -63,7 +63,7 @@
             <li><strong>Life Time Buy:</strong> Sista dag för beställning av reservdelar från fabrik.</li>
             <li><strong>End of Service:</strong> Serviceperiodens sista dag.</li>
             <li> <strong>Konfidensnivå:</strong> Exempel: 95% konfidensnivå innebär att sannolikheten för att lagret skall vara tomt tidigare än EoS är 5%.</li>
-            <li><strong>Repair Lead Time:</strong> Tid i dagar från det ögonblick en reservdel skickas för reparation tills den kommer tillbaka.</li>
+            <li><strong>Reparation ledtid:</strong> Tid i dagar från det ögonblick en reservdel skickas för reparation tills den kommer tillbaka.</li>
         </ul>
         <div>
             <p class="style8">
@@ -71,10 +71,10 @@
             </p>
         </div>
         <ul>
-            <li><strong>Installed Base: </strong> Installerad bas i nätet per år.</li>
-            <li><strong> Regional Stocks:</strong> Antalet regionallager i servicenätet. Varje regionallager måste alltid ha minst en reservdel för att uppfylla kravet på högst 2 timmars leveranstid från ett regionalLager till kund. Därför utgör antalet regionallager en lägsta lagernivå vid EoS.</li>
+            <li><strong>Installerad Bas: </strong> Installerad bas i nätet per år.</li>
+            <li><strong>Antal regionallager:</strong> Antalet regionallager i servicenätet. Varje regionallager måste alltid ha minst en reservdel för att uppfylla kravet på högst 2 timmars leveranstid från ett regionalLager till kund. Därför utgör antalet regionallager en lägsta lagernivå vid EoS.</li>
             <li><strong>Failure Rate: </strong>Genomsnittligt antal fel per år. <strong>FR= 1/MTBF.</strong></li>
-            <li><strong>Repair Loss: </strong> Andelen av delarna som skickas till reparation där reparationen misslyckas.</li>
+            <li><strong>Rep. förluster: </strong> Andelen av delarna som skickas till reparation där reparationen misslyckas.</li>
         </ul>
     </div>
 </div>

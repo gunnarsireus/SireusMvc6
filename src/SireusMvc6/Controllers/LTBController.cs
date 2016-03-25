@@ -1465,14 +1465,14 @@ namespace SireusMvc6.Controllers
         {
             if (!Information.IsNumeric(ViewData["RepairLeadDays"].ToString()))
             {
-                _textInfo = "Repair Lead Time kan inte vara tom!";
+                _textInfo = "Reparationsledtid kan inte vara tom!";
                 ViewData["InfoText"] = _textInfo;
                 return -1;
             }
             _leadDays = (_repairSelected)?Convert.ToInt32(ViewData["RepairLeadDays"].ToString()):2;
             if (_leadDays < LtbCommon.MinLeadDays | _leadDays > LtbCommon.MaxLeadDays)
             {
-                _textInfo = "Fel: 2 <= Repair Lead Time <=365";
+                _textInfo = "Fel: 2 <= Reparationsledtid <=365";
                 ViewData["InfoText"] = _textInfo;
                 return -1;
             }
@@ -1481,7 +1481,7 @@ namespace SireusMvc6.Controllers
             {
                 ClearResult();
                 _textInfo =
-                    "Fel: Repair Lead Time kan inte vara längre än serviceperioden. Vänligen ändra EoS eller Repair Lead Time";
+                    "Fel: Reparationsledtid kan inte vara längre än serviceperioden. Vänligen ändra EoS eller Reparationsledtid";
                 ViewData["InfoText"] = _textInfo;
                 return -1;
             }

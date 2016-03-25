@@ -62,7 +62,7 @@ function CheckRL(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9]|[1-9][0-9]|100)$");
     if (!re.test(GetVal())) {
-        alert("Repair Loss måste vara mellan 0 och 100%!");
+        alert("Rep. förluster måste vara mellan 0 och 100%!");
         return false;
     } else {
         return true;
