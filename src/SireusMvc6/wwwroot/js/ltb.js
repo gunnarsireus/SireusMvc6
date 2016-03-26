@@ -17,7 +17,7 @@ function CheckIB(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     var re = new RegExp("^([0]|[1-9][0-9]{0,4}|EoS)$");
     if (!re.test(GetVal())) {
-        alert("Installed Base måste vara mellan 0 och 99999!");
+        alert("Installerad bas måste vara mellan 0 och 99999!");
         return false;
     } else {
         return true;
