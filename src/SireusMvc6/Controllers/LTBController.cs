@@ -27,7 +27,6 @@ namespace SireusMvc6.Controllers
 
         private static double _confidenceLevelConverted;
         private static int _leadDays;
-        private static int _nbrOfSamples;
         private static double _confidenceLevelFromNormsInv;
         private static string _textInfo;
         private static int _tabidx;
@@ -43,7 +42,7 @@ namespace SireusMvc6.Controllers
         {
             get
             {
-                var ms = LtbCommon.GetEmptyChart();
+                var ms = LtbCommon.GetEmptyChart(800,14);
                 return File(ms.GetBuffer(), "image/png");
             }
         }
@@ -1494,8 +1493,6 @@ namespace SireusMvc6.Controllers
                 return -1;
             }
 
-            _nbrOfSamples = RoundUpInt(ServiceDays / (double)_leadDays, 0);
-
             if (!BoundariesOk(ServiceYears))
             {
                 ViewData["InfoText"] = _textInfo;
@@ -1505,9 +1502,8 @@ namespace SireusMvc6.Controllers
 
             GetInputData(ServiceYears, ref _confidenceLevelFromNormsInv);
             _ltbChart = new MemoryStream();
-            var ltb = new LtbCommon();
-            ltb.LtbWorker(_nbrOfSamples,
-                ServiceDays,
+            var ltb = new LtbCommon(800,14);
+            ltb.LtbWorker(ServiceDays,
                 ServiceYears,
                 _leadDays,
                 out _stock,

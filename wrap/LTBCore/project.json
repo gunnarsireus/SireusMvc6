@@ -3,7 +3,8 @@
   "frameworks": {
     "dnx451": {
       "bin": {
-        "assembly": "../../lib/dnx451/LTBCore.dll"
+        "assembly": "../../src/SireusMvc6/Libs/LTBCore.dll",
+        "pdb": "../../src/SireusMvc6/Libs/LTBCore.pdb"
       },
       "dependencies": {
         "System.Web.DataVisualization": "1.0.0-*",
