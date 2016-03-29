@@ -6,6 +6,7 @@
   "dependencies": {
     "EntityFramework.Commands": "7.0.0-beta8",
     "EntityFramework.SqlServer": "7.0.0-beta8",
+    "JetBrains.ReSharper.SDK": "2016.1.20160319.102744-eap7",
     "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta8",
     "Microsoft.AspNet.Authentication.Facebook": "1.0.0-beta8",
     "Microsoft.AspNet.Authentication.Google": "1.0.0-beta8",
