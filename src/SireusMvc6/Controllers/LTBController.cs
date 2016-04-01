@@ -1501,26 +1501,27 @@ namespace SireusMvc6.Controllers
 
 
             GetInputData(ServiceYears, ref _confidenceLevelFromNormsInv);
-            _ltbChart = new MemoryStream();
-            var ltb = new LtbCommon(800,14);
-            ltb.LtbWorker(ServiceDays,
-                ServiceYears,
-                _leadDays,
-                out _stock,
-                out _safety,
-                out _failed,
-                out _repaired,
-                out _lost,
-                out _total,
-                _confidenceLevelFromNormsInv,
-                _confidenceLevelConverted,
-                InstalledBasePerYear,
-                FailureRatePerYear,
-                RepairLossPerYear,
-                RegionalStocksPerYear,
-                out _ltbChart,
-                Startup.RootPathUpload);
-
+            using (_ltbChart = new MemoryStream())
+            {
+                var ltb = new LtbCommon(800, 14);
+                ltb.LtbWorker(ServiceDays,
+                    ServiceYears,
+                    _leadDays,
+                    out _stock,
+                    out _safety,
+                    out _failed,
+                    out _repaired,
+                    out _lost,
+                    out _total,
+                    _confidenceLevelFromNormsInv,
+                    _confidenceLevelConverted,
+                    InstalledBasePerYear,
+                    FailureRatePerYear,
+                    RepairLossPerYear,
+                    RegionalStocksPerYear,
+                    out _ltbChart,
+                    Startup.RootPathUpload);
+            }
             ViewData["Stock"] = _stock;
             ViewData["Safety"] = _safety;
             ViewData["Total"] = _total;
