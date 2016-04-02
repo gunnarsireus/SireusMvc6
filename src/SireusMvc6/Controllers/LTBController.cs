@@ -7,6 +7,7 @@ using Microsoft.AspNet.Mvc;
 using LTBCore;
 using SireusMvc6.Models;
 using Microsoft.AspNet.Mvc.Rendering;
+using System.Threading;
 
 namespace SireusMvc6.Controllers
 {
@@ -1501,27 +1502,26 @@ namespace SireusMvc6.Controllers
 
 
             GetInputData(ServiceYears, ref _confidenceLevelFromNormsInv);
-            using (_ltbChart = new MemoryStream())
-            {
-                var ltb = new LtbCommon(800, 14);
-                ltb.LtbWorker(ServiceDays,
-                    ServiceYears,
-                    _leadDays,
-                    out _stock,
-                    out _safety,
-                    out _failed,
-                    out _repaired,
-                    out _lost,
-                    out _total,
-                    _confidenceLevelFromNormsInv,
-                    _confidenceLevelConverted,
-                    InstalledBasePerYear,
-                    FailureRatePerYear,
-                    RepairLossPerYear,
-                    RegionalStocksPerYear,
-                    out _ltbChart,
-                    Startup.RootPathUpload);
-            }
+
+            var ltb = new LtbCommon(800, 14);
+            ltb.LtbWorker(ServiceDays,
+                ServiceYears,
+                _leadDays,
+                out _stock,
+                out _safety,
+                out _failed,
+                out _repaired,
+                out _lost,
+                out _total,
+                _confidenceLevelFromNormsInv,
+                _confidenceLevelConverted,
+                InstalledBasePerYear,
+                FailureRatePerYear,
+                RepairLossPerYear,
+                RegionalStocksPerYear,
+                out _ltbChart,
+                Startup.RootPathUpload);
+
             ViewData["Stock"] = _stock;
             ViewData["Safety"] = _safety;
             ViewData["Total"] = _total;
