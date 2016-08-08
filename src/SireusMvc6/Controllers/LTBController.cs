@@ -258,6 +258,9 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB1"].ToString() == "EoS") ViewData["IB1"] = string.Empty;
                         }
                         ViewData["IB1ForeColor"] = "black40";
+                        if ((string)ViewData["RS1"] == string.Empty)
+                        { ViewData["RS1"] = "1";
+                        }
                         ViewData["IB0TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR0TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -281,6 +284,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB2"].ToString() == "EoS") ViewData["IB2"] = string.Empty;
                         }
                         ViewData["IB2ForeColor"] = "black40";
+                        if ((string)ViewData["RS2"] == string.Empty)
+                        {
+                            ViewData["RS2"] = "1";
+                        }
                         ViewData["IB2TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR2TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -299,6 +306,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB3"].ToString() == "EoS") ViewData["IB3"] = string.Empty;
                         }
                         ViewData["IB3ForeColor"] = "black40";
+                        if ((string)ViewData["RS3"] == string.Empty)
+                        {
+                            ViewData["RS3"] = "1";
+                        }
                         ViewData["IB3TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR3TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -317,6 +328,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB4"].ToString() == "EoS") ViewData["IB4"] = string.Empty;
                         }
                         ViewData["IB4ForeColor"] = "black40";
+                        if ((string)ViewData["RS4"] == string.Empty)
+                        {
+                            ViewData["RS4"] = "1";
+                        }
                         ViewData["IB4TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR4TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -335,6 +350,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB5"].ToString() == "EoS") ViewData["IB5"] = string.Empty;
                         }
                         ViewData["IB5ForeColor"] = "black40";
+                        if ((string)ViewData["RS5"] == string.Empty)
+                        {
+                            ViewData["RS5"] = "1";
+                        }
                         ViewData["IB5TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR5TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -353,6 +372,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB6"].ToString() == "EoS") ViewData["IB6"] = string.Empty;
                         }
                         ViewData["IB6ForeColor"] = "black40";
+                        if ((string)ViewData["RS6"] == string.Empty)
+                        {
+                            ViewData["RS6"] = "1";
+                        }
                         ViewData["IB6TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR6TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -371,6 +394,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB7"].ToString() == "EoS") ViewData["IB7"] = string.Empty;
                         }
                         ViewData["IB7ForeColor"] = "black40";
+                        if ((string)ViewData["RS7"] == string.Empty)
+                        {
+                            ViewData["RS7"] = "1";
+                        }
                         ViewData["IB7TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR7TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -389,6 +416,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB8"].ToString() == "EoS") ViewData["IB8"] = string.Empty;
                         }
                         ViewData["IB8ForeColor"] = "black40";
+                        if ((string)ViewData["RS8"] == string.Empty)
+                        {
+                            ViewData["RS8"] = "1";
+                        }
                         ViewData["IB8TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR8TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -407,6 +438,10 @@ namespace SireusMvc6.Controllers
                             if (ViewData["IB9"].ToString() == "EoS") ViewData["IB9"] = string.Empty;
                         }
                         ViewData["IB9ForeColor"] = "black40";
+                        if ((string)ViewData["RS9"] == string.Empty)
+                        {
+                            ViewData["RS9"] = "1";
+                        }
                         ViewData["IB9TabIndex"] = _tabidx;
                         _tabidx += 1;
                         ViewData["FR9TabIndex"] = _tabidx + nbrOfServiceYears;
@@ -1970,8 +2005,23 @@ namespace SireusMvc6.Controllers
             SetNoRepairChecked();
             SetMtbfChecked();
             AdjustForecolorAndClearRemains(0);
+            InitRegionalStocks();
             InitYearTabIndex(false);
             InitConfidenceDropDown_CheckUI();
+        }
+
+        private void InitRegionalStocks()
+        {
+            ViewData["RS0"] = "1";
+            ViewData["RS1"] = "1";
+            ViewData["RS2"] = "1";
+            ViewData["RS3"] = "1";
+            ViewData["RS4"] = "1";
+            ViewData["RS5"] = "1";
+            ViewData["RS6"] = "1";
+            ViewData["RS7"] = "1";
+            ViewData["RS8"] = "1";
+            ViewData["RS9"] = "1";
         }
 
         private void SetMtbfChecked()
