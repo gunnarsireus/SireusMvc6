@@ -259,7 +259,11 @@ namespace SireusMvc6.Controllers
                         }
                         ViewData["IB1ForeColor"] = "black40";
                         if ((string)ViewData["RS1"] == string.Empty)
-                        { ViewData["RS1"] = "1";
+                        {
+                            ViewData["RS1"] = (string)ViewData["RS0"];
+                            ViewData["FR1"] = (string)ViewData["FR0"];
+                            ViewData["IB1"] = (string)ViewData["IB0"];
+                            ViewData["RL1"] = (string)ViewData["RL0"];
                         }
                         ViewData["IB0TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -286,7 +290,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB2ForeColor"] = "black40";
                         if ((string)ViewData["RS2"] == string.Empty)
                         {
-                            ViewData["RS2"] = "1";
+                            ViewData["RS2"] = (string)ViewData["RS1"];
+                            ViewData["FR2"] = (string)ViewData["FR1"];
+                            ViewData["IB2"] = (string)ViewData["IB1"];
+                            ViewData["RL2"] = (string)ViewData["RL1"];
                         }
                         ViewData["IB2TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -308,7 +315,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB3ForeColor"] = "black40";
                         if ((string)ViewData["RS3"] == string.Empty)
                         {
-                            ViewData["RS3"] = "1";
+                            ViewData["RS3"] = (string)ViewData["RS2"];
+                            ViewData["FR3"] = (string)ViewData["FR2"];
+                            ViewData["IB3"] = (string)ViewData["IB2"];
+                            ViewData["RL3"] = (string)ViewData["RL2"];
                         }
                         ViewData["IB3TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -330,7 +340,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB4ForeColor"] = "black40";
                         if ((string)ViewData["RS4"] == string.Empty)
                         {
-                            ViewData["RS4"] = "1";
+                            ViewData["RS4"] = (string)ViewData["RS3"];
+                            ViewData["FR4"] = (string)ViewData["FR3"];
+                            ViewData["IB4"] = (string)ViewData["IB3"];
+                            ViewData["RL4"] = (string)ViewData["RL3"];
                         }
                         ViewData["IB4TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -352,7 +365,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB5ForeColor"] = "black40";
                         if ((string)ViewData["RS5"] == string.Empty)
                         {
-                            ViewData["RS5"] = "1";
+                            ViewData["RS5"] = (string)ViewData["RS4"];
+                            ViewData["FR5"] = (string)ViewData["FR4"];
+                            ViewData["IB5"] = (string)ViewData["IB4"];
+                            ViewData["RL5"] = (string)ViewData["RL4"];
                         }
                         ViewData["IB5TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -374,7 +390,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB6ForeColor"] = "black40";
                         if ((string)ViewData["RS6"] == string.Empty)
                         {
-                            ViewData["RS6"] = "1";
+                            ViewData["RS6"] = (string)ViewData["RS5"];
+                            ViewData["FR6"] = (string)ViewData["FR5"];
+                            ViewData["IB6"] = (string)ViewData["IB5"];
+                            ViewData["RL6"] = (string)ViewData["RL5"];
                         }
                         ViewData["IB6TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -396,7 +415,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB7ForeColor"] = "black40";
                         if ((string)ViewData["RS7"] == string.Empty)
                         {
-                            ViewData["RS7"] = "1";
+                            ViewData["RS7"] = (string)ViewData["RS6"];
+                            ViewData["FR7"] = (string)ViewData["FR6"];
+                            ViewData["IB7"] = (string)ViewData["IB6"];
+                            ViewData["RL7"] = (string)ViewData["RL6"];
                         }
                         ViewData["IB7TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -418,7 +440,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB8ForeColor"] = "black40";
                         if ((string)ViewData["RS8"] == string.Empty)
                         {
-                            ViewData["RS8"] = "1";
+                            ViewData["RS8"] = (string)ViewData["RS7"];
+                            ViewData["FR8"] = (string)ViewData["FR7"];
+                            ViewData["IB8"] = (string)ViewData["IB7"];
+                            ViewData["RL8"] = (string)ViewData["RL7"];
                         }
                         ViewData["IB8TabIndex"] = _tabidx;
                         _tabidx += 1;
@@ -440,7 +465,10 @@ namespace SireusMvc6.Controllers
                         ViewData["IB9ForeColor"] = "black40";
                         if ((string)ViewData["RS9"] == string.Empty)
                         {
-                            ViewData["RS9"] = "1";
+                            ViewData["RS9"] = (string)ViewData["RS8"];
+                            ViewData["FR9"] = (string)ViewData["FR8"];
+                            ViewData["IB9"] = (string)ViewData["IB8"];
+                            ViewData["RL9"] = (string)ViewData["RL8"];
                         }
                         ViewData["IB9TabIndex"] = _tabidx;
                         _tabidx += 1;
