@@ -3,7 +3,7 @@
   "frameworks": {
     "dnx451": {
       "bin": {
-        "assembly": "F:\\Documents\\Visual Studio 2015\\Projects\\SireusMvc6\\src\\SireusMvc6\\Libs\\System.Web.Helpers.dll"
+        "assembly": "../../src/SireusMvc6/Libs/System.Web.Helpers.dll"
       },
       "dependencies": {
         "System.Web.DataVisualization": "1.0.0-*",

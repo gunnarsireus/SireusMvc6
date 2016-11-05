@@ -43,14 +43,17 @@
     "dnx451": {
       "dependencies": {
         "LTBCore": "1.0.0-*",
-        "Microsoft.AspNet.Http.Abstractions": "1.0.0-*",
         "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-*",
+        "NMath": "1.0.0-*",
         "NMathKernelx86": "1.0.0-*",
         "NMathStats": "1.0.0-*",
         "System.Web": "1.0.0-*",
         "System.Web.DataVisualization": "1.0.0-*",
+        "System.Web.WebPages": "1.0.0-*",
+        "System.Web.Helpers": "1.0.0-*",
         "System.Web.Mvc": "1.0.0-*",
-        "System.Web.WebPages": "1.0.0-*"
+        "System.Web.WebPages.Deployment": "1.0.0-*",
+        "System.Web.WebPages.Razor": "1.0.0-*"
       },"dnxcore50": { },
       "frameworkAssemblies": {
         "Microsoft.VisualBasic": "10.0.0.0",

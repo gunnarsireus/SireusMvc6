@@ -3,7 +3,7 @@
   "frameworks": {
     "dnx451": {
       "bin": {
-        "assembly": "../../lib/dnx451/NMathKernelx86.dll"
+        "assembly": "../../src/SireusMvc6/Libs/NMathKernelx86.dll"
       },
       "dependencies": {
         "NMath": "1.0.0-*"
