@@ -12,6 +12,8 @@ $(document).ready(function () {
         CheckHide();
         //$.datepicker.setDefaults($.datepicker.regional['sv']);
     }
+    Spinn();
+
 });
 
 
@@ -241,13 +243,5 @@ function Spinn() {
         ShowText("#divText", function() { ShowText("#divDownload", function() { ShowText("#divContact", function() { runAnimate() }) }) });
     });
 };
-
-$(window).load(function() {
-    if ($.cookie("ScriptOn") === "True") {
-        ShowText("#divSwirl", function() { ShowText("#divText", function() { ShowText("#divDownload", function() { ShowText("#divContact", function() { runAnimate() }) }) }) });
-    }
-    Spinn();
-});
-
 
 //]]>

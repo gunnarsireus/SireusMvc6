@@ -38,8 +38,8 @@ namespace SireusMvc6
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
             // Setup configuration sources.
-            DbConnection = "Data Source=GUNNAR-DELL\\SQLEXPRESS2014;Initial Catalog=PERSONAL.mdf;Trusted_Connection=True";
-            //DbConnection="Server=tcp:e268yd7b87.database.windows.net,1433;Database=PERSONAL.mdf;User ID=gunnarsireus@e268yd7b87;Password=GS1@azure;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
+            //DbConnection = "Data Source=GUNNAR-DELL\\SQLEXPRESS2014;Initial Catalog=PERSONAL.mdf;Trusted_Connection=True";
+            DbConnection="Server=tcp:e268yd7b87.database.windows.net,1433;Database=PERSONAL.mdf;User ID=gunnarsireus@e268yd7b87;Password=GS1@azure;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
             RootPathUpload = appEnv.ApplicationBasePath + @"\Upload";
             var builder = new ConfigurationBuilder()
                 .SetBasePath(appEnv.ApplicationBasePath)
