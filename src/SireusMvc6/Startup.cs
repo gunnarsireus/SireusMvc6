@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Authentication.Facebook;
-using Microsoft.AspNet.Authentication.Google;
-using Microsoft.AspNet.Authentication.MicrosoftAccount;
-using Microsoft.AspNet.Authentication.Twitter;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics.Entity;
 using Microsoft.AspNet.Hosting;
@@ -17,7 +11,6 @@ using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using SireusMvc6.Models;
 using SireusMvc6.Services;
-using Microsoft.AspNet.Http;
 
 namespace SireusMvc6
 {
