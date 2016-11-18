@@ -8,6 +8,7 @@
 /// <reference path="js/jquery.validate.unobtrusive.js" />
 /// <reference path="js/jquery-1.10.2.js" />
 /// <reference path="js/jquery-2.0.3.js" />
+/// <reference path="js/jquery-3.1.1.js" />
 /// <reference path="js/jquery-ui.js" />
 /// <reference path="js/jquery-ui-1.10.3.js" />
 /// <reference path="js/ltb.js" />
