@@ -16,8 +16,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <input id="ButtonCollapse" type="submit" class="btn btn-info pull-right " value="Dölj text" onclick="Collapse()" />
-                @*@Html.BootstrapButton("ButtonCollapse", "D&#246;lj text", Enums.ButtonPosition.Right, Enums.ButtonType.Submit, Enums.ButtonStyle.Info, Enums.ButtonSize.Normal, "Collapse()")*@
+                <button id="ButtonCollapse" class="btn btn-info pull-right "  onclick="Collapse()">Dölj text</button>     
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -90,7 +89,7 @@
             <div class="col-md-4 col-sm-4 col-xs-4">
                 <div class="row">
                     <div class="col-md-4 col-sm-4 text-left">
-                        <input id="Calculate" type="submit" class="btn btn-info pull-left" value="Beräkna" onclick="Javascript:GetResult()" />
+                        <button id="Calculate" class="btn btn-info pull-left" onclick="Javascript:GetResult()">Beräkna</button>
                     </div>
                     <div class="col-md-8 col-sm-8 text-left">
                         <div id="divInfoBox" style="display: none;">
@@ -102,14 +101,14 @@
             <div class="col-md-4 col-sm-4 col-xs-4">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 text-left">
-                        <input id="Clear" type="submit" class="btn btn-info pull-left" value="Sudda" onclick="location.href = '/LTB/Clear'" />
+                        <button id="Clear" class="btn btn-info pull-left" onclick="location.href = '/LTB/Clear'">Sudda</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <input id="ButtonCollapse1" type="submit" class="btn btn-info  " value="Visa text" onclick="Collapse()" />
+                        <button id="ButtonCollapse1" class="btn btn-info"onclick="Collapse()">Visa text</button>
                     </div>
                 </div>
             </div>
