@@ -27,7 +27,7 @@ function CheckIB(p) {
 function CheckFR(p) {
     var GetVal = jQuery.fn.V = function () { return $("#" + p).val(); };
     if ($("#rbMTBF_0").is(":checked")) {
-        var re = new RegExp("^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|100000|[0-9][,][0-9]{0,1}[1-9])$");
+        var re = new RegExp("^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9]|100000|[0-9][,][0-9][1-9])$");
         if (!re.test(GetVal())) {
             alert("MTBF måste vara mellan 0,01 och 100000!");
             return false;
