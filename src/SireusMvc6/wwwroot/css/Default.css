@@ -1,0 +1,405 @@
+﻿/*Nota Bene*/
+
+        .NB
+        {
+            color: #FF0000;
+            font-weight:900;
+            float:inherit;
+          }
+
+/* LTB TAGS */
+        .black40
+        {
+            color: Black;
+            width: 50px;
+        }
+        .red40
+        {
+            color: Red;
+            width: 50px;
+        }
+        .BorderInsetRight
+        {  border-style: inset; text-align: right; font-weight: 700;}
+          
+        .AlignRight
+        {
+            text-align: right;
+        }
+        .XLargeCenterUnderline
+        {
+            font-size: x-large;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+/* 0 BASIC TAGS */
+
+table {
+	font-size: 1em;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	}
+
+p {
+	line-height: 1.4em;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #bababa;
+	height: 1px;
+}
+
+a {
+	text-decoration: none;
+	color: #d32525;
+}
+
+
+a:visited {
+	color: #980000;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #e05252;
+}
+
+a:active {
+	color: #980000;
+}
+
+img {
+	border-width: 0;
+}
+
+/* 1 HEADER */
+
+h1 {
+	position: absolute;
+	left: 37px;
+	top: 12px;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+h2 {
+	position: absolute;
+	left: 37px;
+	top: 60px;
+	font-size: 11px;
+}
+
+.menua {
+	position: absolute;
+	right: 37px;
+	top: 17px;
+	text-transform: uppercase;
+	font-size: 10px;
+	z-index:1;
+}
+
+.nav {
+	position: absolute;
+	right: 37px;
+	top: 60px;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.menua a:visited, .nav a:visited {
+	color: #d32525;
+}
+
+/* 1.1 SHIM */
+
+.shim {
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: 760px;
+	height: 8px;
+	font-size: 0;
+}
+
+
+/* 2 PAGE */
+
+.page {
+	background-repeat: repeat-y;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;	
+}
+
+h3 {
+	margin-top: 1.0em;
+	margin-bottom: 1.12em;
+	font-weight: bold;
+}
+h4 {
+	margin-top: 1.0em;
+	margin-bottom: 1.12em;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+/* 2.1 HOME, RESUME, LINKS, LTB, REGISTER, ADMIN/ALBUMS, ADMIN/PHOTOS PAGES */
+
+#sidebar {
+	float: left;
+	width: 214px;
+	height: 100%;
+}
+
+#Content0 {
+	margin-left: 256px;
+}
+#content {
+	margin-left: 256px;
+}
+.cont {
+	margin-left: 256px;
+}
+
+#whatsnew {
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+#coollinks {
+	margin-left: 220px;
+}
+
+#resume h4, #links h4, #ltb h4,#ltb2 h4,#ltb3 h4 {
+	margin-top: 0 !important;
+	border-top: 1px solid #bababa !important;
+	padding-top: 1.0em !important;
+	position: absolute !important;
+	left: 37px !important;
+	width: 214px !important;
+}
+
+#resume #photo {
+	position: absolute;
+	left: 49px;
+	top: 20px;
+	width: 144px;
+}
+
+#resume .second {
+	margin-top: 0;
+	border-top: 1px solid #bababa;
+	padding-top: 1.5em;
+	text-align:justify;
+}
+
+#resume .first {
+	margin-top: 0;
+	border-top: 1px solid #bababa;
+	padding-top: 1.5em;
+	text-align:right;
+}
+
+#resume .firstAccStrongTop {
+	margin-top: 0;
+	border-top: 1px solid #bababa;
+	padding-top: 1.5em;
+	font-weight:bold;
+}
+
+#resume .firstAccStrongPad {
+	margin-top: 0;
+	border-top: 1px solid #bababa;
+	padding-top: 0.75em;
+	padding-bottom:0.75em;
+	font-weight:bold;
+}
+
+#resume .firstAccStrong {
+	margin-top: 0;
+	padding-top: 1.5em;
+	font-weight:bold;
+}
+#resume .firstAcc {
+	margin-top: 0;
+	padding-top: 1.5em;
+	height:auto;
+}
+
+dl {
+	margin-top: 0;
+	margin-bottom: 0;
+	border-top: 1px solid #bababa;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	position: relative;
+}
+
+dt {
+	position: absolute;
+	left: 0;
+}
+
+dd {
+	margin-left: 150px;
+	height: 2.0em;
+}
+
+.emptydata td {
+	padding: 50px;
+	color: #aeaeae;
+}
+
+/* 2.2 ALBUMS PAGE */
+
+#albums {
+	background-image: url('./Images/body-repeat-photo.gif');
+	padding: 0px 37px;
+	padding-bottom: 40px;
+	width: 1060px;
+	padding-top:1.0em;
+}
+
+.view {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1060px;
+	text-align: center;
+}
+
+.view .photo-frame {
+	margin-left: auto;
+	margin-right: auto;
+	border:"0" ;
+}
+
+.item {
+	padding: 20px 50px;
+	color: #B2B2B2;
+}
+
+.item h4 {
+	margin-bottom: 0.4em;
+}
+
+.nullpanel {
+	padding: 150px;
+	width: auto;
+	text-align: center;
+}
+
+/* 2.3 PHOTOS, DETAILS, ADMIN/DETAILS PAGE */
+
+#photos, #details, #admin-details {
+	background-image: url('./Images/body-repeat-photo.gif');
+	padding: 0;
+	width: 1060px;
+}
+
+.buttonbar {
+	background-image: url('./Images/photonav-bg.gif');
+	background-repeat: repeat-x;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4px;
+	width: 1060px;
+	height: 33px;
+	text-align: center;
+}
+
+.buttonbar-top {
+	background-image: url('./Images/photonav-top-bg.gif');
+}
+
+#photos .view, #admin-details .view {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#box 
+{
+    position:absolute;
+    top:150px;
+	width:750px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:15px;
+}
+    
+
+/* 3 FOOTER */
+
+.menub {
+	margin: 12px auto 5px auto;
+	text-transform: uppercase;
+	font-size: 10px;
+	z-index:0;
+}
+
+.menub0 {
+	margin: 12px 100px 5px auto;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.menub a:visited {
+	color: #d32525;
+}
+
+
+
+/* Inline styles are used because image controls hard code a border property */
+
+.photo_198 {
+	border: 4px solid #FFFFFF;
+}
+
+/*Textbox Watermark*/
+
+
+
+.unwatermarked {
+
+	height:18px;
+
+	width:148px;
+
+}
+
+
+
+.watermarked {
+
+
+
+	color:gray;
+
+}	
+
+table.fixed { table-layout:fixed; border:border-width:1px }
+table.fixed td { overflow: hidden; }
+
+#sectionHome
+{
+     display:normal;
+}
+#sectionResume
+{
+    display: none;
+
+}
+#sectionLinks
+{
+    display: none;
+
+}
+#sectionLTB
+{
+    display: none;
+  
+}
